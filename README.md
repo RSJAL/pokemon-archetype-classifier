@@ -79,17 +79,18 @@ Defense > 78
 
 **1. Install dependencies**
 ```bash
-pip install pandas requests lxml beautifulsoup4 scikit-learn matplotlib numpy
+uv sync
+source .venv/bin/activate
 ```
 
 **2. Collect data** (or use the included `pokedex_fe.csv`)
 ```bash
-python "Build Pokedex.py"
+uv run "Build Pokedex.py"
 ```
 
 **3. Run the ML pipeline**
 ```bash
-python pokemon_ml.py
+uv run pokemon_ml.py
 ```
 
 Outputs: `radar_clusters_light.png`, `radar_clusters.png`, `pca_biplot.png`, `type_heatmap.png`, `generation_breakdown.png`, `pokedex_clustered.csv`
