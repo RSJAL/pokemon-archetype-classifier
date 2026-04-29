@@ -21,7 +21,7 @@ Data Collection → K-Means Clustering → KNN + Decision Tree → Visualisation
 
 | Archetype | n | Profile |
 |---|---|---|
-| HP Tank | 84 | High HP, moderate Speed — survives through raw bulk |
+| HP Tank | 84 | High HP, low Speed — survives through raw bulk |
 | Below Average | 183 | Uniformly low stats — the NFE-adjacent tier |
 | All-Rounder | 122 | Solid across the board — the pseudo-legendary bracket |
 | Sp. Fighter | 117 | Elevated Sp. Atk and Sp. Def — fights on the special side |
