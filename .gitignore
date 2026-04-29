@@ -2,3 +2,4 @@ pokemon_pca_cluster_viz.html
 __pycache__/
 *.pyc
 .DS_Store
+*.pkl

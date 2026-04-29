@@ -164,6 +164,16 @@ def raw_rules(tree, feature_names, scaler):
 print("\nDecision rules (depth=3, raw stat values):")
 print(raw_rules(dt_final, STAT_COLS, scaler))
 
+# --- 3c. Persist models ------------------------------------------------------
+import joblib
+joblib.dump(knn_final, "knn_model.pkl")
+joblib.dump(scaler,    "scaler.pkl")
+print("\nSaved knn_model.pkl and scaler.pkl")
+print("To classify a new Pokemon:")
+print("  knn = joblib.load('knn_model.pkl')")
+print("  scaler = joblib.load('scaler.pkl')")
+print("  cluster = knn.predict(scaler.transform([[hp, atk, def_, sp_atk, sp_def, spd]]))")
+
 # =============================================================================
 # 4. VISUALISATION
 # =============================================================================
