@@ -469,19 +469,25 @@ archetype_order = [CLUSTER_NAMES[i] for i in range(K)]
 type_pct = type_pct.reindex(columns=archetype_order)
 type_pct = type_pct.loc[type_pct.sum(axis=1).sort_values(ascending=False).index]
 
-fig, ax = plt.subplots(figsize=(10, 9))
+fig, ax = plt.subplots(figsize=(12, 11))
 im = ax.imshow(type_pct.values, aspect="auto", cmap="YlOrRd")
 ax.set_xticks(range(K))
-ax.set_xticklabels(archetype_order, fontsize=9)
+ax.set_xticklabels(archetype_order, fontsize=12, fontweight="bold")
 ax.set_yticks(range(len(type_pct)))
-ax.set_yticklabels(type_pct.index, fontsize=8)
-plt.colorbar(im, ax=ax, label="% of archetype")
-ax.set_title("Type Distribution by Archetype (% of archetype total)", fontsize=11)
+ax.set_yticklabels(type_pct.index, fontsize=10)
+ax.tick_params(axis="x", pad=8)
+cbar = plt.colorbar(im, ax=ax, label="% of archetype", shrink=0.8)
+cbar.ax.tick_params(labelsize=9)
+cbar.set_label("% of archetype", fontsize=10)
+ax.set_title("Type Distribution by Archetype (% of archetype total)",
+             fontsize=13, pad=14)
+vmax = type_pct.values.max()
 for i in range(len(type_pct)):
-    for j in range(N := len(archetype_order)):
+    for j in range(len(archetype_order)):
         val = type_pct.values[i, j]
         ax.text(j, i, f"{val:.1f}", ha="center", va="center",
-                fontsize=6.5, color="black" if val < 12 else "white")
+                fontsize=8.5, fontweight="bold",
+                color="white" if val > vmax * 0.55 else "#333333")
 plt.tight_layout()
 plt.savefig("type_heatmap.png", dpi=150)
 plt.show()
