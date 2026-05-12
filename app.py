@@ -8,6 +8,7 @@ Run with:  streamlit run app.py
 """
 
 from pathlib import Path
+import base64
 import math
 import numpy as np
 import pandas as pd
@@ -105,15 +106,226 @@ def get_image(csv_name: str, image_map: dict):
         return None
 
 
-# ── neighbour web figure ──────────────────────────────────────────────────────
+# ── image helpers ─────────────────────────────────────────────────────────────
+def img_to_b64(path_str: str):
+    """Return a base64 PNG data URI, or None if the file can't be read."""
+    if not path_str:
+        return None
+    p = Path(path_str)
+    if not p.exists():
+        return None
+    try:
+        with open(p, "rb") as f:
+            data = base64.b64encode(f.read()).decode()
+        return f"data:image/png;base64,{data}"
+    except Exception:
+        return None
+
+
+# ── plotly neighbour web ───────────────────────────────────────────────────────
+def make_neighbour_web_plotly(selected_row, neighbours_df, image_map):
+    n = min(5, len(neighbours_df))
+    pokemon_list = [selected_row] + [neighbours_df.iloc[i] for i in range(n)]
+
+    BG     = "#0e1117"
+    cx, cy = _POSITIONS[0]
+    ball_r = 2.046
+    b_op   = 0.07   # pokéball base opacity
+
+    fig = go.Figure()
+
+    # ── pokéball: top half (red) — filled scatter polygon ─────────────────────
+    _theta_top = np.linspace(0, np.pi, 120)
+    fig.add_trace(go.Scatter(
+        x=np.concatenate([[cx], cx + ball_r * np.cos(_theta_top), [cx]]),
+        y=np.concatenate([[cy], cy + ball_r * np.sin(_theta_top), [cy]]),
+        fill="toself", fillcolor="rgba(204,34,0,0.156)",
+        line=dict(width=0), hoverinfo="skip", showlegend=False,
+    ))
+    # bottom half (light grey)
+    _theta_bot = np.linspace(np.pi, 2 * np.pi, 120)
+    fig.add_trace(go.Scatter(
+        x=np.concatenate([[cx], cx + ball_r * np.cos(_theta_bot), [cx]]),
+        y=np.concatenate([[cy], cy + ball_r * np.sin(_theta_bot), [cy]]),
+        fill="toself", fillcolor="rgba(220,220,220,0.084)",
+        line=dict(width=0), hoverinfo="skip", showlegend=False,
+    ))
+    # outer ring
+    fig.add_shape(
+        type="circle",
+        x0=cx - ball_r, y0=cy - ball_r, x1=cx + ball_r, y1=cy + ball_r,
+        fillcolor="rgba(0,0,0,0)",
+        line=dict(color="#888888", width=1.5),
+        opacity=b_op * 2.5,
+        xref="x", yref="y", layer="below",
+    )
+    # centre band
+    fig.add_shape(
+        type="line",
+        x0=cx - ball_r, y0=cy, x1=cx + ball_r, y1=cy,
+        line=dict(color="#888888", width=2.5),
+        opacity=b_op * 2.5,
+        xref="x", yref="y", layer="below",
+    )
+    # centre button outer
+    fig.add_shape(
+        type="circle",
+        x0=cx - 0.238, y0=cy - 0.238, x1=cx + 0.238, y1=cy + 0.238,
+        fillcolor="#aaaaaa",
+        line=dict(color="#888888", width=1.5),
+        opacity=b_op * 3,
+        xref="x", yref="y", layer="below",
+    )
+    # centre button inner
+    fig.add_shape(
+        type="circle",
+        x0=cx - 0.132, y0=cy - 0.132, x1=cx + 0.132, y1=cy + 0.132,
+        fillcolor="#ffffff", line_width=0,
+        opacity=b_op * 3,
+        xref="x", yref="y", layer="below",
+    )
+
+    # ── concentric dashed rings ────────────────────────────────────────────────
+    for r, alpha in [(0.726, 0.30), (1.386, 0.45), (2.046, 0.30)]:
+        fig.add_shape(
+            type="circle",
+            x0=cx - r, y0=cy - r, x1=cx + r, y1=cy + r,
+            fillcolor="rgba(0,0,0,0)",
+            line=dict(color="#7a8aaa", width=1.2, dash="dash"),
+            opacity=alpha,
+            xref="x", yref="y",
+        )
+
+    # ── connector lines + distance labels ─────────────────────────────────────
+    for i in range(1, n + 1):
+        nx, ny = _POSITIONS[i]
+        fig.add_shape(
+            type="line",
+            x0=cx, y0=cy, x1=nx, y1=ny,
+            line=dict(color="#3a3a4a", width=1.2, dash="dash"),
+            xref="x", yref="y",
+        )
+        dist = neighbours_df.iloc[i - 1].get("Distance", None)
+        if dist is not None:
+            frac = 0.50 if ny > cy else 0.65
+            mx = cx + frac * (nx - cx)
+            my = cy + frac * (ny - cy)
+            fig.add_annotation(
+                x=mx, y=my, text=f"{dist:.2f}",
+                showarrow=False,
+                font=dict(color="rgba(255,255,255,0.7)", size=10),
+                xref="x", yref="y",
+                xanchor="center", yanchor="middle",
+                bgcolor="rgba(0,0,0,0)",
+            )
+
+    # ── soft glow behind centre sprite ────────────────────────────────────────
+    glow_r = 0.70
+    fig.add_shape(
+        type="circle",
+        x0=cx - glow_r, y0=cy - glow_r, x1=cx + glow_r, y1=cy + glow_r,
+        fillcolor="rgba(255,255,255,0.06)",
+        line_width=0,
+        xref="x", yref="y", layer="below",
+    )
+
+    # ── sprites via layout.images ──────────────────────────────────────────────
+    for i, poke_row in enumerate(pokemon_list):
+        px, py   = _POSITIONS[i]
+        is_centre = i == 0
+        size     = 1.244 if is_centre else 0.794
+        src      = img_to_b64(image_map.get(poke_row["Name"], ""))
+        if src:
+            fig.add_layout_image(
+                source=src,
+                x=px, y=py,
+                xanchor="center", yanchor="middle",
+                sizex=size, sizey=size,
+                xref="x", yref="y",
+                layer="above",
+            )
+
+    # ── centre name label ──────────────────────────────────────────────────────
+    centre_name = display_name(selected_row["Name"])
+    centre_label_y = cy - 0.554
+    fig.add_annotation(
+        x=cx, y=centre_label_y,
+        text=f"<b>{centre_name}</b>",
+        showarrow=False,
+        font=dict(color="white", size=14),
+        xref="x", yref="y",
+        xanchor="center", yanchor="top",
+    )
+
+
+    # ── invisible click targets for neighbours (indices 1-5) ──────────────────
+    click_x      = [_POSITIONS[i][0] for i in range(1, n + 1)]
+    click_y      = [_POSITIONS[i][1] for i in range(1, n + 1)]
+
+    hover_custom = []
+    border_colors = []
+    for i in range(n):
+        row   = neighbours_df.iloc[i]
+        name  = display_name(row["Name"])
+        types = str(row["Type"]).strip().split()
+        # Coloured type labels
+        type_html = "  ".join(
+            f'<span style="color:{TYPE_COLORS.get(t, "#aaa")}">'
+            f'&#9632; {t}</span>'
+            for t in types
+        )
+        hover_custom.append(
+            f"<b><span style='font-size:18px'>{name}</span></b><br>"
+            f"<span style='font-size:15px'>{type_html}</span><br>"
+            f"<i>Click to compare</i>"
+        )
+        border_colors.append(TYPE_COLORS.get(types[0], "#aaaaaa"))
+
+    fig.add_trace(go.Scatter(
+        x=click_x, y=click_y,
+        mode="markers",
+        marker=dict(
+            size=72,
+            color="rgba(0,0,0,0)",
+            line=dict(color="rgba(0,0,0,0)", width=0),
+        ),
+        customdata=hover_custom,
+        hovertemplate="%{customdata}<extra></extra>",
+        hoverlabel=dict(
+            bgcolor="#1a1a2e",
+            bordercolor=border_colors,
+            font=dict(color="white", size=16),
+            namelength=-1,
+        ),
+        showlegend=False,
+    ))
+
+    fig.update_layout(
+        paper_bgcolor=BG,
+        plot_bgcolor=BG,
+        xaxis=dict(range=[-1.65, 2.10], visible=False, fixedrange=True),
+        yaxis=dict(range=[-2.20, 2.40], visible=False, fixedrange=True,
+                   scaleanchor="x", scaleratio=1),
+        margin=dict(l=0, r=0, t=0, b=0),
+        height=648,
+        showlegend=False,
+        hovermode="closest",
+        dragmode=False,
+        uirevision="static",
+    )
+
+    return fig
+
+
+# ── neighbour web figure (matplotlib — kept as fallback) ─────────────────────
 # Slot positions: index 0 = centre (selected), 1-5 = neighbours
 _POSITIONS = [
-    (0.0,   0.11),   # centre
-    (-1.32, 1.155),  # top-left
-    (0.0,   1.65),   # top-centre
-    (1.32,  1.155),  # top-right
-    (-1.21, -0.935), # bottom-left
-    (1.21,  -0.935), # bottom-right
+    (0.0,    0.132),  # centre
+    (-1.584, 1.386),  # top-left
+    (0.0,    1.98),   # top-centre
+    (1.584,  1.386),  # top-right
+    (-1.452, -1.122), # bottom-left
+    (1.452,  -1.122), # bottom-right
 ]
 
 
@@ -297,9 +509,20 @@ def type_badge(t):
 
 # ── page setup ────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Pokémon Archetype Explorer",
+    page_title="Pokémon Stat Explorer",
     page_icon="pokeball",
     layout="wide",
+)
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebarContent"] {
+        padding-top: 1rem !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
 
 df, scaler, X = load_data()
@@ -313,6 +536,10 @@ disp_to_csv    = dict(zip(all_disp_names, all_csv_names))
 
 # ── sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
+    st.title("Pokémon Stat Explorer")
+    st.caption("Select any Pokémon to see its 5 nearest neighbours in stat space. Archetypes via K-Means (K=5) · KNN similarity (Euclidean distance) · PCA projection.")
+    st.divider()
+
     default_disp = display_name("Garchomp")
     selected_disp = st.selectbox(
         "Choose a Pokémon",
@@ -352,15 +579,6 @@ with st.sidebar:
     st.markdown(stat_bar_html("Total", int(_sel["Total"]), 700, "#888"),
                 unsafe_allow_html=True)
 
-    st.divider()
-    st.markdown("**Archetypes**")
-    for arch_name, arch_color in ARCHETYPE_COLORS.items():
-        st.markdown(
-            f'<span style="display:inline-block;width:12px;height:12px;'
-            f'background:{arch_color};border-radius:50%;margin-right:6px;vertical-align:middle"></span>'
-            f'<span style="font-size:13px">{arch_name}</span>',
-            unsafe_allow_html=True,
-        )
 
     if not image_map:
         st.divider()
@@ -388,210 +606,189 @@ if same_archetype:
 
 neighbours_df = neighbours_df.head(n_neighbours).reset_index(drop=True)
 
-# ── tabs ──────────────────────────────────────────────────────────────────────
-st.title("Pokémon Archetype Explorer")
-st.caption("K-Means (K=5) on base stats · Similarity: Euclidean distance in scaled stat space.")
+# ── main content ──────────────────────────────────────────────────────────────
+neighbours_5 = neighbours_df.head(5).reset_index(drop=True)
 
-tab_web, tab_radar = st.tabs(["Neighbour Web", "Radar & Stats"])
-
-# ── TAB 1: Neighbour Web ──────────────────────────────────────────────────────
-with tab_web:
-    import io
-    col_web, col_compare = st.columns([1, 1])
-
-    # Left: neighbour web
-    with col_web:
-        neighbours_5 = neighbours_df.head(5).reset_index(drop=True)
-        fig_web = make_neighbour_web(selected, neighbours_5, image_map)
-        buf = io.BytesIO()
-        fig_web.savefig(buf, format="png", dpi=120, bbox_inches="tight",
-                        facecolor="#0e1117")
-        buf.seek(0)
-        plt.close(fig_web)
-        st.image(buf, width=655)
-
-    # Right: comparison panel
-    with col_compare:
-        compare_disp = st.selectbox(
-            "Compare with",
-            all_disp_names,
-            index=0,
-            key="compare_select",
+# Handle click from the Plotly web — must run before the selectbox renders
+_web_state = st.session_state.get("web_chart", {})
+_pts = (_web_state.get("selection") or {}).get("points", [])
+_last_pts = st.session_state.get("_web_last_pts", [])
+if _pts and _pts != _last_pts:
+    st.session_state["_web_last_pts"] = _pts
+    _clicked_idx = _pts[0].get("point_index", None)
+    if _clicked_idx is not None and _clicked_idx < len(neighbours_5):
+        st.session_state["compare_select"] = display_name(
+            neighbours_5.iloc[_clicked_idx]["Name"]
         )
-        compare_name = disp_to_csv[compare_disp]
-        _cmp = df.loc[df["Name"] == compare_name].iloc[0]
-        cmp_idx   = df[df["Name"] == compare_name].index[0]
-        cmp_color = ARCHETYPE_COLORS.get(_cmp["Archetype"], "#888")
-        sel_color_ref = ARCHETYPE_COLORS.get(selected["Archetype"], "#888")
 
-        # Pokémon image
-        cmp_img_path = image_map.get(compare_name, "")
-        if cmp_img_path and Path(cmp_img_path).exists():
-            st.image(cmp_img_path, width=130)
+col_web, col_compare = st.columns([1, 1])
 
-        # Dex # and generation
+# Left: Plotly neighbour web
+with col_web:
+    fig_web = make_neighbour_web_plotly(selected, neighbours_5, image_map)
+    st.plotly_chart(
+        fig_web,
+        use_container_width=True,
+        on_select="rerun",
+        key="web_chart",
+        config={"displayModeBar": False, "scrollZoom": False, "doubleClick": "reset"},
+    )
+
+# Right: comparison panel
+with col_compare:
+    compare_disp = st.selectbox(
+        "Compare with",
+        all_disp_names,
+        index=0,
+        key="compare_select",
+    )
+    compare_name = disp_to_csv[compare_disp]
+    _cmp = df.loc[df["Name"] == compare_name].iloc[0]
+    cmp_idx   = df[df["Name"] == compare_name].index[0]
+    cmp_color = ARCHETYPE_COLORS.get(_cmp["Archetype"], "#888")
+    sel_color_ref = ARCHETYPE_COLORS.get(selected["Archetype"], "#888")
+
+    # Pokémon image
+    cmp_img_path = image_map.get(compare_name, "")
+    if cmp_img_path and Path(cmp_img_path).exists():
+        st.image(cmp_img_path, width=130)
+
+    # Dex # and generation
+    st.markdown(
+        f"**#{int(_cmp['Dex_Number'])}** &nbsp;·&nbsp; Generation {int(_cmp['Generation'])}",
+        unsafe_allow_html=True,
+    )
+
+    # Type badges
+    cmp_types = str(_cmp["Type"]).strip().split()
+    st.markdown("".join(type_badge(t) for t in cmp_types) + "<br>", unsafe_allow_html=True)
+
+    # Archetype pill
+    st.markdown(
+        f'<div style="background:{cmp_color}28;border-left:4px solid {cmp_color};'
+        f'padding:6px 12px;border-radius:6px;font-weight:700;font-size:13px;margin:8px 0 8px">'
+        f'Archetype: {_cmp["Archetype"]}</div>',
+        unsafe_allow_html=True,
+    )
+
+    # Euclidean distance to selected Pokémon
+    dist_to_sel = float(np.linalg.norm(X[cmp_idx] - X[idx]))
+    st.markdown(
+        f'<div style="font-size:13px;color:#aaa;margin-bottom:10px">'
+        f'Distance to <b style="color:white">{selected_disp}</b>: '
+        f'<b style="color:{cmp_color}">{dist_to_sel:.3f}</b></div>',
+        unsafe_allow_html=True,
+    )
+
+    # Stat comparison bars (comparison colour vs selected dimmed)
+    st.markdown(
+        f'<div style="font-size:12px;color:#cccccc;margin-bottom:4px">'
+        f'<span style="color:{cmp_color}">&#9632;</span> {compare_disp} &nbsp;&nbsp;'
+        f'<span style="color:{sel_color_ref};opacity:0.5">&#9632;</span> {selected_disp}</div>',
+        unsafe_allow_html=True,
+    )
+    for lbl, col_name in zip(STAT_LABELS, STAT_COLS):
         st.markdown(
-            f"**#{int(_cmp['Dex_Number'])}** &nbsp;·&nbsp; Generation {int(_cmp['Generation'])}",
+            comparison_bar_html(lbl, int(_cmp[col_name]), int(selected[col_name]),
+                                cmp_color, sel_color_ref),
             unsafe_allow_html=True,
         )
+    st.markdown(
+        comparison_bar_html("Total", int(_cmp["Total"]), int(selected["Total"]),
+                            cmp_color, sel_color_ref, max_val=700),
+        unsafe_allow_html=True,
+    )
 
-        # Type badges
-        cmp_types = str(_cmp["Type"]).strip().split()
-        st.markdown("".join(type_badge(t) for t in cmp_types) + "<br>", unsafe_allow_html=True)
-
-        # Archetype pill
-        st.markdown(
-            f'<div style="background:{cmp_color}28;border-left:4px solid {cmp_color};'
-            f'padding:6px 12px;border-radius:6px;font-weight:700;font-size:13px;margin:8px 0 8px">'
-            f'Archetype: {_cmp["Archetype"]}</div>',
-            unsafe_allow_html=True,
-        )
-
-        # Euclidean distance to selected Pokémon
-        dist_to_sel = float(np.linalg.norm(X[cmp_idx] - X[idx]))
-        st.markdown(
-            f'<div style="font-size:13px;color:#aaa;margin-bottom:10px">'
-            f'Distance to <b style="color:white">{selected_disp}</b>: '
-            f'<b style="color:{cmp_color}">{dist_to_sel:.3f}</b></div>',
-            unsafe_allow_html=True,
-        )
-
-        # Stat comparison bars (comparison colour vs selected dimmed)
-        st.markdown(
-            f'<div style="font-size:12px;color:#cccccc;margin-bottom:4px">'
-            f'<span style="color:{cmp_color}">&#9632;</span> {compare_disp} &nbsp;&nbsp;'
-            f'<span style="color:{sel_color_ref};opacity:0.5">&#9632;</span> {selected_disp}</div>',
-            unsafe_allow_html=True,
-        )
-        for lbl, col_name in zip(STAT_LABELS, STAT_COLS):
-            st.markdown(
-                comparison_bar_html(lbl, int(_cmp[col_name]), int(selected[col_name]),
-                                    cmp_color, sel_color_ref),
-                unsafe_allow_html=True,
-            )
-        st.markdown(
-            comparison_bar_html("Total", int(_cmp["Total"]), int(selected["Total"]),
-                                cmp_color, sel_color_ref, max_val=700),
-            unsafe_allow_html=True,
-        )
-
-
-# ── TAB 2: PCA Explorer ───────────────────────────────────────────────────────
-with tab_radar:
-    pca_coords, pca_var = compute_pca(X)
-    neighbour_idxs = set(neighbours_df.index.tolist())
-
-    fig_pca = go.Figure()
-
-    for archetype, color in ARCHETYPE_COLORS.items():
-        mask = df["Archetype"] == archetype
-        sub  = df[mask].copy()
-        sub_coords = pca_coords[mask]
-
-        hover = [
-            f"<b>{display_name(row['Name'])}</b><br>"
-            f"#{int(row['Dex_Number'])} · Gen {int(row['Generation'])}<br>"
-            f"Type: {row['Type'].strip()}<br>"
-            f"Archetype: {row['Archetype']}<br>"
-            f"HP {int(row['HP'])} · Atk {int(row['Attack'])} · Def {int(row['Defense'])}<br>"
-            f"SpA {int(row['Sp_Atk'])} · SpD {int(row['Sp_Def'])} · Spe {int(row['Speed'])}<br>"
-            f"Total: {int(row['Total'])}"
-            for _, row in sub.iterrows()
-        ]
-
-        fig_pca.add_trace(go.Scatter(
-            x=sub_coords[:, 0], y=sub_coords[:, 1],
-            mode="markers",
-            name=archetype,
-            marker=dict(color=color, size=6, opacity=0.6,
-                        line=dict(width=0)),
-            hovertemplate="%{customdata}<extra></extra>",
-            customdata=hover,
-        ))
-
-    # Nearest neighbours ring
-    nb_coords = pca_coords[neighbours_df.index]
-    nb_hover  = [
+# PCA scatter
+pca_coords, pca_var = compute_pca(X)
+fig_pca = go.Figure()
+for archetype, color in ARCHETYPE_COLORS.items():
+    mask = df["Archetype"] == archetype
+    sub  = df[mask].copy()
+    sub_coords = pca_coords[mask]
+    hover = [
         f"<b>{display_name(row['Name'])}</b><br>"
         f"#{int(row['Dex_Number'])} · Gen {int(row['Generation'])}<br>"
         f"Type: {row['Type'].strip()}<br>"
         f"Archetype: {row['Archetype']}<br>"
         f"HP {int(row['HP'])} · Atk {int(row['Attack'])} · Def {int(row['Defense'])}<br>"
         f"SpA {int(row['Sp_Atk'])} · SpD {int(row['Sp_Def'])} · Spe {int(row['Speed'])}<br>"
-        f"Total: {int(row['Total'])}<br>"
-        f"Distance: {row['Distance']:.3f}"
-        for _, row in neighbours_df.iterrows()
+        f"Total: {int(row['Total'])}"
+        for _, row in sub.iterrows()
     ]
     fig_pca.add_trace(go.Scatter(
-        x=nb_coords[:, 0], y=nb_coords[:, 1],
-        mode="markers",
-        name="Neighbours",
-        marker=dict(color="white", size=10, opacity=0.9,
-                    line=dict(color="white", width=2),
-                    symbol="circle-open"),
+        x=sub_coords[:, 0], y=sub_coords[:, 1],
+        mode="markers", name=archetype,
+        marker=dict(color=color, size=6, opacity=0.6, line=dict(width=0)),
         hovertemplate="%{customdata}<extra></extra>",
-        customdata=nb_hover,
+        customdata=hover,
     ))
+nb_coords = pca_coords[neighbours_df.index]
+nb_hover  = [
+    f"<b>{display_name(row['Name'])}</b><br>"
+    f"#{int(row['Dex_Number'])} · Gen {int(row['Generation'])}<br>"
+    f"Type: {row['Type'].strip()}<br>"
+    f"Archetype: {row['Archetype']}<br>"
+    f"HP {int(row['HP'])} · Atk {int(row['Attack'])} · Def {int(row['Defense'])}<br>"
+    f"SpA {int(row['Sp_Atk'])} · SpD {int(row['Sp_Def'])} · Spe {int(row['Speed'])}<br>"
+    f"Total: {int(row['Total'])}<br>Distance: {row['Distance']:.3f}"
+    for _, row in neighbours_df.iterrows()
+]
+fig_pca.add_trace(go.Scatter(
+    x=nb_coords[:, 0], y=nb_coords[:, 1],
+    mode="markers", name="Neighbours",
+    marker=dict(color="white", size=10, opacity=0.9,
+                line=dict(color="white", width=2), symbol="circle-open"),
+    hovertemplate="%{customdata}<extra></extra>",
+    customdata=nb_hover,
+))
+fig_pca.add_trace(go.Scatter(
+    x=[pca_coords[idx, 0]], y=[pca_coords[idx, 1]],
+    mode="markers+text", name=selected_disp,
+    marker=dict(color=ARCHETYPE_COLORS.get(selected["Archetype"], "#fff"),
+                size=14, symbol="star", line=dict(color="white", width=1.5)),
+    text=[selected_disp], textposition="top center",
+    textfont=dict(color="white", size=12),
+    hovertemplate=(
+        f"<b>{selected_disp}</b><br>"
+        f"#{int(selected['Dex_Number'])} · Gen {int(selected['Generation'])}<br>"
+        f"Type: {selected['Type'].strip()}<br>Archetype: {selected['Archetype']}<br>"
+        f"HP {int(selected['HP'])} · Atk {int(selected['Attack'])} · Def {int(selected['Defense'])}<br>"
+        f"SpA {int(selected['Sp_Atk'])} · SpD {int(selected['Sp_Def'])} · Spe {int(selected['Speed'])}<br>"
+        f"Total: {int(selected['Total'])}<extra></extra>"
+    ),
+))
+fig_pca.update_layout(
+    xaxis_title=f"PC1 ({pca_var[0]:.1f}% variance)",
+    yaxis_title=f"PC2 ({pca_var[1]:.1f}% variance)",
+    paper_bgcolor="#0e1117", plot_bgcolor="#0e1117",
+    font=dict(color="white"),
+    legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(size=12)),
+    xaxis=dict(gridcolor="#2a2a3a", zerolinecolor="#2a2a3a"),
+    yaxis=dict(gridcolor="#2a2a3a", zerolinecolor="#2a2a3a"),
+    height=600, margin=dict(l=20, r=20, t=20, b=20),
+    hovermode="closest",
+)
+st.plotly_chart(fig_pca, use_container_width=True)
 
-    # Selected Pokémon star
-    fig_pca.add_trace(go.Scatter(
-        x=[pca_coords[idx, 0]], y=[pca_coords[idx, 1]],
-        mode="markers+text",
-        name=selected_disp,
-        marker=dict(
-            color=ARCHETYPE_COLORS.get(selected["Archetype"], "#fff"),
-            size=14, symbol="star",
-            line=dict(color="white", width=1.5),
-        ),
-        text=[selected_disp],
-        textposition="top center",
-        textfont=dict(color="white", size=12),
-        hovertemplate=(
-            f"<b>{selected_disp}</b><br>"
-            f"#{int(selected['Dex_Number'])} · Gen {int(selected['Generation'])}<br>"
-            f"Type: {selected['Type'].strip()}<br>"
-            f"Archetype: {selected['Archetype']}<br>"
-            f"HP {int(selected['HP'])} · Atk {int(selected['Attack'])} · Def {int(selected['Defense'])}<br>"
-            f"SpA {int(selected['Sp_Atk'])} · SpD {int(selected['Sp_Def'])} · Spe {int(selected['Speed'])}<br>"
-            f"Total: {int(selected['Total'])}"
-            "<extra></extra>"
-        ),
-    ))
+# Neighbour table
+display_df = neighbours_df[
+    ["Name", "Type", "Generation", "Archetype"] + STAT_COLS + ["Total", "Distance"]
+].copy()
+display_df["Name"]       = display_df["Name"].apply(display_name)
+display_df["Generation"] = display_df["Generation"].astype(int)
+st.dataframe(
+    display_df, use_container_width=True, hide_index=True,
+    column_config={
+        "Distance": st.column_config.NumberColumn(format="%.3f"),
+        "HP":       st.column_config.ProgressColumn("HP",      min_value=0, max_value=200, format="%d"),
+        "Attack":   st.column_config.ProgressColumn("Attack",  min_value=0, max_value=200, format="%d"),
+        "Defense":  st.column_config.ProgressColumn("Defense", min_value=0, max_value=200, format="%d"),
+        "Sp_Atk":   st.column_config.ProgressColumn("Sp. Atk",min_value=0, max_value=200, format="%d"),
+        "Sp_Def":   st.column_config.ProgressColumn("Sp. Def",min_value=0, max_value=200, format="%d"),
+        "Speed":    st.column_config.ProgressColumn("Speed",   min_value=0, max_value=200, format="%d"),
+        "Total":    st.column_config.ProgressColumn("Total",   min_value=0, max_value=700, format="%d"),
+    },
+)
 
-    fig_pca.update_layout(
-        xaxis_title=f"PC1 ({pca_var[0]:.1f}% variance)",
-        yaxis_title=f"PC2 ({pca_var[1]:.1f}% variance)",
-        paper_bgcolor="#0e1117",
-        plot_bgcolor="#0e1117",
-        font=dict(color="white"),
-        legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(size=12)),
-        xaxis=dict(gridcolor="#2a2a3a", zerolinecolor="#2a2a3a"),
-        yaxis=dict(gridcolor="#2a2a3a", zerolinecolor="#2a2a3a"),
-        height=600,
-        margin=dict(l=20, r=20, t=20, b=20),
-        hovermode="closest",
-    )
 
-    st.plotly_chart(fig_pca, use_container_width=True)
-
-    display_df = neighbours_df[
-        ["Name", "Type", "Generation", "Archetype"] + STAT_COLS + ["Total", "Distance"]
-    ].copy()
-    display_df["Name"]       = display_df["Name"].apply(display_name)
-    display_df["Generation"] = display_df["Generation"].astype(int)
-
-    st.dataframe(
-        display_df,
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "Distance": st.column_config.NumberColumn(format="%.3f"),
-            "HP":       st.column_config.ProgressColumn("HP",      min_value=0, max_value=200, format="%d"),
-            "Attack":   st.column_config.ProgressColumn("Attack",  min_value=0, max_value=200, format="%d"),
-            "Defense":  st.column_config.ProgressColumn("Defense", min_value=0, max_value=200, format="%d"),
-            "Sp_Atk":   st.column_config.ProgressColumn("Sp. Atk",min_value=0, max_value=200, format="%d"),
-            "Sp_Def":   st.column_config.ProgressColumn("Sp. Def",min_value=0, max_value=200, format="%d"),
-            "Speed":    st.column_config.ProgressColumn("Speed",   min_value=0, max_value=200, format="%d"),
-            "Total":    st.column_config.ProgressColumn("Total",   min_value=0, max_value=700, format="%d"),
-        },
-    )

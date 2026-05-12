@@ -1,0 +1,656 @@
+csv_name,display_name,slug,path,status
+Venusaur,Venusaur,venusaur,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\venusaur.png,cached
+Charizard,Charizard,charizard,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\charizard.png,ok
+Blastoise,Blastoise,blastoise,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\blastoise.png,ok
+Butterfree,Butterfree,butterfree,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\butterfree.png,ok
+Beedrill,Beedrill,beedrill,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\beedrill.png,ok
+Pidgeot,Pidgeot,pidgeot,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pidgeot.png,ok
+Raticate,Raticate,raticate,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\raticate.png,ok
+Raticate  Alolan Raticate,Raticate (Alolan Raticate),raticate-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\raticate-alolan.png,ok
+Fearow,Fearow,fearow,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\fearow.png,ok
+Arbok,Arbok,arbok,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arbok.png,ok
+Pikachu,Pikachu,pikachu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pikachu.png,ok
+Raichu,Raichu,raichu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\raichu.png,ok
+Raichu  Alolan Raichu,Raichu (Alolan Raichu),raichu-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\raichu-alolan.png,ok
+Sandslash,Sandslash,sandslash,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sandslash.png,ok
+Sandslash  Alolan Sandslash,Sandslash (Alolan Sandslash),sandslash-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sandslash-alolan.png,ok
+Nidoqueen,Nidoqueen,nidoqueen,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\nidoqueen.png,ok
+Nidoking,Nidoking,nidoking,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\nidoking.png,ok
+Clefable,Clefable,clefable,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\clefable.png,ok
+Ninetales,Ninetales,ninetales,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ninetales.png,ok
+Ninetales  Alolan Ninetales,Ninetales (Alolan Ninetales),ninetales-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ninetales-alolan.png,ok
+Wigglytuff,Wigglytuff,wigglytuff,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wigglytuff.png,ok
+Vileplume,Vileplume,vileplume,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\vileplume.png,ok
+Parasect,Parasect,parasect,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\parasect.png,ok
+Venomoth,Venomoth,venomoth,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\venomoth.png,ok
+Dugtrio,Dugtrio,dugtrio,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dugtrio.png,ok
+Dugtrio  Alolan Dugtrio,Dugtrio (Alolan Dugtrio),dugtrio-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dugtrio-alolan.png,ok
+Persian,Persian,persian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\persian.png,ok
+Persian  Alolan Persian,Persian (Alolan Persian),persian-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\persian-alolan.png,ok
+Golduck,Golduck,golduck,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\golduck.png,ok
+Arcanine,Arcanine,arcanine,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arcanine.png,ok
+Arcanine  Hisuian Arcanine,Arcanine (Hisuian Arcanine),arcanine-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arcanine-hisuian.png,ok
+Poliwrath,Poliwrath,poliwrath,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\poliwrath.png,ok
+Alakazam,Alakazam,alakazam,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\alakazam.png,ok
+Machamp,Machamp,machamp,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\machamp.png,ok
+Victreebel,Victreebel,victreebel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\victreebel.png,ok
+Tentacruel,Tentacruel,tentacruel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tentacruel.png,ok
+Golem,Golem,golem,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\golem.png,ok
+Golem  Alolan Golem,Golem (Alolan Golem),golem-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\golem-alolan.png,ok
+Rapidash,Rapidash,rapidash,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rapidash.png,ok
+Rapidash  Galarian Rapidash,Rapidash (Galarian Rapidash),rapidash-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rapidash-galarian.png,ok
+Slowbro,Slowbro,slowbro,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slowbro.png,ok
+Slowbro  Galarian Slowbro,Slowbro (Galarian Slowbro),slowbro-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slowbro-galarian.png,ok
+Farfetch'd,Farfetch'd,farfetchd,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\farfetchd.png,ok
+Farfetch'd  Galarian Farfetch'd,Farfetch'd (Galarian Farfetch'd),farfetchd-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\farfetchd-galarian.png,ok
+Dodrio,Dodrio,dodrio,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dodrio.png,ok
+Dewgong,Dewgong,dewgong,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dewgong.png,ok
+Muk,Muk,muk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\muk.png,ok
+Muk  Alolan Muk,Muk (Alolan Muk),muk-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\muk-alolan.png,ok
+Cloyster,Cloyster,cloyster,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cloyster.png,ok
+Gengar,Gengar,gengar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gengar.png,ok
+Hypno,Hypno,hypno,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hypno.png,ok
+Kingler,Kingler,kingler,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kingler.png,ok
+Electrode,Electrode,electrode,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\electrode.png,ok
+Electrode  Hisuian Electrode,Electrode (Hisuian Electrode),electrode-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\electrode-hisuian.png,ok
+Exeggutor,Exeggutor,exeggutor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\exeggutor.png,ok
+Exeggutor  Alolan Exeggutor,Exeggutor (Alolan Exeggutor),exeggutor-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\exeggutor-alolan.png,ok
+Marowak,Marowak,marowak,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\marowak.png,ok
+Marowak  Alolan Marowak,Marowak (Alolan Marowak),marowak-alolan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\marowak-alolan.png,ok
+Hitmonlee,Hitmonlee,hitmonlee,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hitmonlee.png,ok
+Hitmonchan,Hitmonchan,hitmonchan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hitmonchan.png,ok
+Weezing,Weezing,weezing,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\weezing.png,ok
+Weezing  Galarian Weezing,Weezing (Galarian Weezing),weezing-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\weezing-galarian.png,ok
+Kangaskhan,Kangaskhan,kangaskhan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kangaskhan.png,ok
+Seaking,Seaking,seaking,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\seaking.png,ok
+Starmie,Starmie,starmie,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\starmie.png,ok
+Mr. Mime,Mr. Mime,mr-mime,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mr-mime.png,ok
+Mr. Mime  Galarian Mr. Mime,Mr. Mime (Galarian Mr. Mime),mr-mime-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mr-mime-galarian.png,ok
+Jynx,Jynx,jynx,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\jynx.png,ok
+Pinsir,Pinsir,pinsir,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pinsir.png,ok
+Tauros,Tauros,tauros,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tauros.png,ok
+Tauros  Combat Breed,Tauros (Combat Breed),tauros-paldean-combat,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tauros-paldean-combat.png,ok
+Tauros  Blaze Breed,Tauros (Blaze Breed),tauros-blaze,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tauros-blaze.png,ok
+Tauros  Aqua Breed,Tauros (Aqua Breed),tauros-aqua,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tauros-aqua.png,ok
+Gyarados,Gyarados,gyarados,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gyarados.png,ok
+Lapras,Lapras,lapras,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lapras.png,ok
+Ditto,Ditto,ditto,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ditto.png,ok
+Eevee,Eevee,eevee,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\eevee.png,ok
+Vaporeon,Vaporeon,vaporeon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\vaporeon.png,ok
+Jolteon,Jolteon,jolteon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\jolteon.png,ok
+Flareon,Flareon,flareon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\flareon.png,ok
+Omastar,Omastar,omastar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\omastar.png,ok
+Kabutops,Kabutops,kabutops,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kabutops.png,ok
+Aerodactyl,Aerodactyl,aerodactyl,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\aerodactyl.png,ok
+Snorlax,Snorlax,snorlax,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\snorlax.png,ok
+Articuno,Articuno,articuno,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\articuno.png,ok
+Articuno  Galarian Articuno,Articuno (Galarian Articuno),articuno-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\articuno-galarian.png,ok
+Zapdos,Zapdos,zapdos,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zapdos.png,ok
+Zapdos  Galarian Zapdos,Zapdos (Galarian Zapdos),zapdos-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zapdos-galarian.png,ok
+Moltres,Moltres,moltres,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\moltres.png,ok
+Moltres  Galarian Moltres,Moltres (Galarian Moltres),moltres-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\moltres-galarian.png,ok
+Dragonite,Dragonite,dragonite,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dragonite.png,ok
+Mewtwo,Mewtwo,mewtwo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mewtwo.png,ok
+Mew,Mew,mew,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mew.png,ok
+Meganium,Meganium,meganium,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\meganium.png,ok
+Typhlosion,Typhlosion,typhlosion,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\typhlosion.png,ok
+Typhlosion  Hisuian Typhlosion,Typhlosion (Hisuian Typhlosion),typhlosion-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\typhlosion-hisuian.png,ok
+Feraligatr,Feraligatr,feraligatr,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\feraligatr.png,ok
+Furret,Furret,furret,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\furret.png,ok
+Noctowl,Noctowl,noctowl,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\noctowl.png,ok
+Ledian,Ledian,ledian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ledian.png,ok
+Ariados,Ariados,ariados,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ariados.png,ok
+Crobat,Crobat,crobat,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\crobat.png,ok
+Lanturn,Lanturn,lanturn,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lanturn.png,ok
+Xatu,Xatu,xatu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\xatu.png,ok
+Ampharos,Ampharos,ampharos,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ampharos.png,ok
+Bellossom,Bellossom,bellossom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bellossom.png,ok
+Azumarill,Azumarill,azumarill,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\azumarill.png,ok
+Sudowoodo,Sudowoodo,sudowoodo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sudowoodo.png,ok
+Politoed,Politoed,politoed,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\politoed.png,ok
+Jumpluff,Jumpluff,jumpluff,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\jumpluff.png,ok
+Sunflora,Sunflora,sunflora,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sunflora.png,ok
+Quagsire,Quagsire,quagsire,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\quagsire.png,ok
+Espeon,Espeon,espeon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\espeon.png,ok
+Umbreon,Umbreon,umbreon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\umbreon.png,ok
+Slowking,Slowking,slowking,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slowking.png,ok
+Slowking  Galarian Slowking,Slowking (Galarian Slowking),slowking-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slowking-galarian.png,ok
+Unown,Unown,unown,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\unown.png,ok
+Wobbuffet,Wobbuffet,wobbuffet,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wobbuffet.png,ok
+Forretress,Forretress,forretress,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\forretress.png,ok
+Steelix,Steelix,steelix,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\steelix.png,ok
+Granbull,Granbull,granbull,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\granbull.png,ok
+Qwilfish,Qwilfish,qwilfish,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\qwilfish.png,ok
+Qwilfish  Hisuian Qwilfish,Qwilfish (Hisuian Qwilfish),qwilfish-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\qwilfish-hisuian.png,ok
+Scizor,Scizor,scizor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\scizor.png,ok
+Shuckle,Shuckle,shuckle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\shuckle.png,ok
+Heracross,Heracross,heracross,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\heracross.png,ok
+Magcargo,Magcargo,magcargo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\magcargo.png,ok
+Corsola,Corsola,corsola,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\corsola.png,ok
+Corsola  Galarian Corsola,Corsola (Galarian Corsola),corsola-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\corsola-galarian.png,ok
+Octillery,Octillery,octillery,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\octillery.png,ok
+Delibird,Delibird,delibird,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\delibird.png,ok
+Mantine,Mantine,mantine,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mantine.png,ok
+Skarmory,Skarmory,skarmory,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\skarmory.png,ok
+Houndoom,Houndoom,houndoom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\houndoom.png,ok
+Kingdra,Kingdra,kingdra,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kingdra.png,ok
+Donphan,Donphan,donphan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\donphan.png,ok
+Smeargle,Smeargle,smeargle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\smeargle.png,ok
+Hitmontop,Hitmontop,hitmontop,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hitmontop.png,ok
+Miltank,Miltank,miltank,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\miltank.png,ok
+Blissey,Blissey,blissey,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\blissey.png,ok
+Raikou,Raikou,raikou,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\raikou.png,ok
+Entei,Entei,entei,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\entei.png,ok
+Suicune,Suicune,suicune,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\suicune.png,ok
+Tyranitar,Tyranitar,tyranitar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tyranitar.png,ok
+Lugia,Lugia,lugia,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lugia.png,ok
+Ho-oh,Ho-oh,ho-oh,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ho-oh.png,ok
+Celebi,Celebi,celebi,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\celebi.png,ok
+Sceptile,Sceptile,sceptile,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sceptile.png,ok
+Blaziken,Blaziken,blaziken,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\blaziken.png,ok
+Swampert,Swampert,swampert,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\swampert.png,ok
+Mightyena,Mightyena,mightyena,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mightyena.png,ok
+Linoone,Linoone,linoone,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\linoone.png,ok
+Linoone  Galarian Linoone,Linoone (Galarian Linoone),linoone-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\linoone-galarian.png,ok
+Beautifly,Beautifly,beautifly,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\beautifly.png,ok
+Dustox,Dustox,dustox,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dustox.png,ok
+Ludicolo,Ludicolo,ludicolo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ludicolo.png,ok
+Shiftry,Shiftry,shiftry,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\shiftry.png,ok
+Swellow,Swellow,swellow,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\swellow.png,ok
+Pelipper,Pelipper,pelipper,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pelipper.png,ok
+Gardevoir,Gardevoir,gardevoir,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gardevoir.png,ok
+Masquerain,Masquerain,masquerain,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\masquerain.png,ok
+Breloom,Breloom,breloom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\breloom.png,ok
+Slaking,Slaking,slaking,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slaking.png,ok
+Ninjask,Ninjask,ninjask,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ninjask.png,ok
+Shedinja,Shedinja,shedinja,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\shedinja.png,ok
+Exploud,Exploud,exploud,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\exploud.png,ok
+Hariyama,Hariyama,hariyama,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hariyama.png,ok
+Delcatty,Delcatty,delcatty,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\delcatty.png,ok
+Sableye,Sableye,sableye,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sableye.png,ok
+Mawile,Mawile,mawile,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mawile.png,ok
+Aggron,Aggron,aggron,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\aggron.png,ok
+Medicham,Medicham,medicham,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\medicham.png,ok
+Manectric,Manectric,manectric,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\manectric.png,ok
+Plusle,Plusle,plusle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\plusle.png,ok
+Minun,Minun,minun,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\minun.png,ok
+Volbeat,Volbeat,volbeat,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\volbeat.png,ok
+Illumise,Illumise,illumise,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\illumise.png,ok
+Swalot,Swalot,swalot,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\swalot.png,ok
+Sharpedo,Sharpedo,sharpedo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sharpedo.png,ok
+Wailord,Wailord,wailord,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wailord.png,ok
+Camerupt,Camerupt,camerupt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\camerupt.png,ok
+Torkoal,Torkoal,torkoal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\torkoal.png,ok
+Grumpig,Grumpig,grumpig,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\grumpig.png,ok
+Spinda,Spinda,spinda,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\spinda.png,ok
+Flygon,Flygon,flygon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\flygon.png,ok
+Cacturne,Cacturne,cacturne,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cacturne.png,ok
+Altaria,Altaria,altaria,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\altaria.png,ok
+Zangoose,Zangoose,zangoose,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zangoose.png,ok
+Seviper,Seviper,seviper,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\seviper.png,ok
+Lunatone,Lunatone,lunatone,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lunatone.png,ok
+Solrock,Solrock,solrock,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\solrock.png,ok
+Whiscash,Whiscash,whiscash,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\whiscash.png,ok
+Crawdaunt,Crawdaunt,crawdaunt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\crawdaunt.png,ok
+Claydol,Claydol,claydol,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\claydol.png,ok
+Cradily,Cradily,cradily,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cradily.png,ok
+Armaldo,Armaldo,armaldo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\armaldo.png,ok
+Milotic,Milotic,milotic,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\milotic.png,ok
+Castform,Castform,castform,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\castform.png,ok
+Kecleon,Kecleon,kecleon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kecleon.png,ok
+Banette,Banette,banette,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\banette.png,ok
+Tropius,Tropius,tropius,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tropius.png,ok
+Chimecho,Chimecho,chimecho,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\chimecho.png,ok
+Absol,Absol,absol,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\absol.png,ok
+Glalie,Glalie,glalie,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\glalie.png,ok
+Walrein,Walrein,walrein,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\walrein.png,ok
+Huntail,Huntail,huntail,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\huntail.png,ok
+Gorebyss,Gorebyss,gorebyss,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gorebyss.png,ok
+Relicanth,Relicanth,relicanth,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\relicanth.png,ok
+Luvdisc,Luvdisc,luvdisc,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\luvdisc.png,ok
+Salamence,Salamence,salamence,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\salamence.png,ok
+Metagross,Metagross,metagross,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\metagross.png,ok
+Regirock,Regirock,regirock,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\regirock.png,ok
+Regice,Regice,regice,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\regice.png,ok
+Registeel,Registeel,registeel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\registeel.png,ok
+Latias,Latias,latias,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\latias.png,ok
+Latios,Latios,latios,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\latios.png,ok
+Kyogre,Kyogre,kyogre,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kyogre.png,ok
+Groudon,Groudon,groudon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\groudon.png,ok
+Rayquaza,Rayquaza,rayquaza,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rayquaza.png,ok
+Jirachi,Jirachi,jirachi,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\jirachi.png,ok
+Deoxys  Normal Forme,Deoxys (Normal Forme),deoxys-normal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\deoxys-normal.png,ok
+Deoxys  Attack Forme,Deoxys (Attack Forme),deoxys-attack,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\deoxys-attack.png,ok
+Deoxys  Defense Forme,Deoxys (Defense Forme),deoxys-defense,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\deoxys-defense.png,ok
+Deoxys  Speed Forme,Deoxys (Speed Forme),deoxys-speed,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\deoxys-speed.png,ok
+Torterra,Torterra,torterra,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\torterra.png,ok
+Infernape,Infernape,infernape,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\infernape.png,ok
+Empoleon,Empoleon,empoleon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\empoleon.png,ok
+Staraptor,Staraptor,staraptor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\staraptor.png,ok
+Bibarel,Bibarel,bibarel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bibarel.png,ok
+Kricketune,Kricketune,kricketune,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kricketune.png,ok
+Luxray,Luxray,luxray,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\luxray.png,ok
+Roserade,Roserade,roserade,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\roserade.png,ok
+Rampardos,Rampardos,rampardos,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rampardos.png,ok
+Bastiodon,Bastiodon,bastiodon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bastiodon.png,ok
+Wormadam  Plant Cloak,Wormadam (Plant Cloak),wormadam-plant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wormadam-plant.png,ok
+Wormadam  Sandy Cloak,Wormadam (Sandy Cloak),wormadam-sandy,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wormadam-sandy.png,ok
+Wormadam  Trash Cloak,Wormadam (Trash Cloak),wormadam-trash,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wormadam-trash.png,ok
+Mothim,Mothim,mothim,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mothim.png,ok
+Vespiquen,Vespiquen,vespiquen,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\vespiquen.png,ok
+Pachirisu,Pachirisu,pachirisu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pachirisu.png,ok
+Floatzel,Floatzel,floatzel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\floatzel.png,ok
+Cherrim,Cherrim,cherrim,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cherrim.png,ok
+Gastrodon,Gastrodon,gastrodon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gastrodon.png,ok
+Ambipom,Ambipom,ambipom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ambipom.png,ok
+Drifblim,Drifblim,drifblim,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\drifblim.png,ok
+Lopunny,Lopunny,lopunny,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lopunny.png,ok
+Mismagius,Mismagius,mismagius,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mismagius.png,ok
+Honchkrow,Honchkrow,honchkrow,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\honchkrow.png,ok
+Purugly,Purugly,purugly,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\purugly.png,ok
+Skuntank,Skuntank,skuntank,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\skuntank.png,ok
+Bronzong,Bronzong,bronzong,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bronzong.png,ok
+Chatot,Chatot,chatot,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\chatot.png,ok
+Spiritomb,Spiritomb,spiritomb,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\spiritomb.png,ok
+Garchomp,Garchomp,garchomp,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\garchomp.png,ok
+Lucario,Lucario,lucario,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lucario.png,ok
+Hippowdon,Hippowdon,hippowdon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hippowdon.png,ok
+Drapion,Drapion,drapion,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\drapion.png,ok
+Toxicroak,Toxicroak,toxicroak,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\toxicroak.png,ok
+Carnivine,Carnivine,carnivine,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\carnivine.png,ok
+Lumineon,Lumineon,lumineon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lumineon.png,ok
+Abomasnow,Abomasnow,abomasnow,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\abomasnow.png,ok
+Weavile,Weavile,weavile,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\weavile.png,ok
+Magnezone,Magnezone,magnezone,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\magnezone.png,ok
+Lickilicky,Lickilicky,lickilicky,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lickilicky.png,ok
+Rhyperior,Rhyperior,rhyperior,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rhyperior.png,ok
+Tangrowth,Tangrowth,tangrowth,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tangrowth.png,ok
+Electivire,Electivire,electivire,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\electivire.png,ok
+Magmortar,Magmortar,magmortar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\magmortar.png,ok
+Togekiss,Togekiss,togekiss,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\togekiss.png,ok
+Yanmega,Yanmega,yanmega,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\yanmega.png,ok
+Leafeon,Leafeon,leafeon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\leafeon.png,ok
+Glaceon,Glaceon,glaceon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\glaceon.png,ok
+Gliscor,Gliscor,gliscor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gliscor.png,ok
+Mamoswine,Mamoswine,mamoswine,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mamoswine.png,ok
+Porygon-Z,Porygon-Z,porygon-z,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\porygon-z.png,ok
+Gallade,Gallade,gallade,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gallade.png,ok
+Probopass,Probopass,probopass,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\probopass.png,ok
+Dusknoir,Dusknoir,dusknoir,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dusknoir.png,ok
+Froslass,Froslass,froslass,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\froslass.png,ok
+Rotom,Rotom,rotom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rotom.png,ok
+Rotom  Heat Rotom,Rotom (Heat Rotom),rotom-heat,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rotom-heat.png,ok
+Rotom  Wash Rotom,Rotom (Wash Rotom),rotom-wash,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rotom-wash.png,ok
+Rotom  Frost Rotom,Rotom (Frost Rotom),rotom-frost,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rotom-frost.png,ok
+Rotom  Fan Rotom,Rotom (Fan Rotom),rotom-fan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rotom-fan.png,ok
+Rotom  Mow Rotom,Rotom (Mow Rotom),rotom-mow,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rotom-mow.png,ok
+Uxie,Uxie,uxie,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\uxie.png,ok
+Mesprit,Mesprit,mesprit,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mesprit.png,ok
+Azelf,Azelf,azelf,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\azelf.png,ok
+Dialga,Dialga,dialga,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dialga.png,ok
+Dialga  Origin Forme,Dialga (Origin Forme),dialga-origin,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dialga-origin.png,ok
+Palkia,Palkia,palkia,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\palkia.png,ok
+Palkia  Origin Forme,Palkia (Origin Forme),palkia-origin,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\palkia-origin.png,ok
+Heatran,Heatran,heatran,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\heatran.png,ok
+Regigigas,Regigigas,regigigas,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\regigigas.png,ok
+Giratina  Altered Forme,Giratina (Altered Forme),giratina-altered,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\giratina-altered.png,ok
+Giratina  Origin Forme,Giratina (Origin Forme),giratina-origin,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\giratina-origin.png,ok
+Cresselia,Cresselia,cresselia,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cresselia.png,ok
+Phione,Phione,phione,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\phione.png,ok
+Manaphy,Manaphy,manaphy,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\manaphy.png,ok
+Darkrai,Darkrai,darkrai,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\darkrai.png,ok
+Shaymin  Land Forme,Shaymin (Land Forme),shaymin-land,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\shaymin-land.png,ok
+Shaymin  Sky Forme,Shaymin (Sky Forme),shaymin-sky,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\shaymin-sky.png,ok
+Arceus,Arceus,arceus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arceus.png,ok
+Victini,Victini,victini,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\victini.png,ok
+Serperior,Serperior,serperior,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\serperior.png,ok
+Emboar,Emboar,emboar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\emboar.png,ok
+Samurott,Samurott,samurott,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\samurott.png,ok
+Samurott  Hisuian Samurott,Samurott (Hisuian Samurott),samurott-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\samurott-hisuian.png,ok
+Watchog,Watchog,watchog,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\watchog.png,ok
+Stoutland,Stoutland,stoutland,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\stoutland.png,ok
+Liepard,Liepard,liepard,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\liepard.png,ok
+Simisage,Simisage,simisage,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\simisage.png,ok
+Simisear,Simisear,simisear,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\simisear.png,ok
+Simipour,Simipour,simipour,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\simipour.png,ok
+Musharna,Musharna,musharna,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\musharna.png,ok
+Unfezant,Unfezant,unfezant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\unfezant.png,ok
+Zebstrika,Zebstrika,zebstrika,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zebstrika.png,ok
+Gigalith,Gigalith,gigalith,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gigalith.png,ok
+Swoobat,Swoobat,swoobat,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\swoobat.png,ok
+Excadrill,Excadrill,excadrill,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\excadrill.png,ok
+Audino,Audino,audino,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\audino.png,ok
+Conkeldurr,Conkeldurr,conkeldurr,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\conkeldurr.png,ok
+Seismitoad,Seismitoad,seismitoad,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\seismitoad.png,ok
+Throh,Throh,throh,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\throh.png,ok
+Sawk,Sawk,sawk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sawk.png,ok
+Leavanny,Leavanny,leavanny,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\leavanny.png,ok
+Scolipede,Scolipede,scolipede,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\scolipede.png,ok
+Whimsicott,Whimsicott,whimsicott,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\whimsicott.png,ok
+Lilligant,Lilligant,lilligant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lilligant.png,ok
+Lilligant  Hisuian Lilligant,Lilligant (Hisuian Lilligant),lilligant-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lilligant-hisuian.png,ok
+Basculin  Red-Striped Form,Basculin (Red-Striped Form),basculin-red-striped,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\basculin-red-striped.png,ok
+Krookodile,Krookodile,krookodile,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\krookodile.png,ok
+Darmanitan  Standard Mode,Darmanitan (Standard Mode),darmanitan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\darmanitan.png,ok
+Darmanitan  Galarian Standard Mode,Darmanitan (Galarian Standard Mode),darmanitan-galarian-standard,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\darmanitan-galarian-standard.png,ok
+Maractus,Maractus,maractus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\maractus.png,ok
+Crustle,Crustle,crustle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\crustle.png,ok
+Scrafty,Scrafty,scrafty,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\scrafty.png,ok
+Sigilyph,Sigilyph,sigilyph,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sigilyph.png,ok
+Cofagrigus,Cofagrigus,cofagrigus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cofagrigus.png,ok
+Carracosta,Carracosta,carracosta,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\carracosta.png,ok
+Archeops,Archeops,archeops,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\archeops.png,ok
+Garbodor,Garbodor,garbodor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\garbodor.png,ok
+Zoroark,Zoroark,zoroark,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zoroark.png,ok
+Zoroark  Hisuian Zoroark,Zoroark (Hisuian Zoroark),zoroark-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zoroark-hisuian.png,ok
+Cinccino,Cinccino,cinccino,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cinccino.png,ok
+Gothitelle,Gothitelle,gothitelle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gothitelle.png,ok
+Reuniclus,Reuniclus,reuniclus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\reuniclus.png,ok
+Swanna,Swanna,swanna,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\swanna.png,ok
+Vanilluxe,Vanilluxe,vanilluxe,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\vanilluxe.png,ok
+Sawsbuck,Sawsbuck,sawsbuck,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sawsbuck.png,ok
+Emolga,Emolga,emolga,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\emolga.png,ok
+Escavalier,Escavalier,escavalier,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\escavalier.png,ok
+Amoonguss,Amoonguss,amoonguss,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\amoonguss.png,ok
+Jellicent,Jellicent,jellicent,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\jellicent.png,ok
+Alomomola,Alomomola,alomomola,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\alomomola.png,ok
+Galvantula,Galvantula,galvantula,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\galvantula.png,ok
+Ferrothorn,Ferrothorn,ferrothorn,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ferrothorn.png,ok
+Klinklang,Klinklang,klinklang,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\klinklang.png,ok
+Eelektross,Eelektross,eelektross,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\eelektross.png,ok
+Beheeyem,Beheeyem,beheeyem,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\beheeyem.png,ok
+Chandelure,Chandelure,chandelure,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\chandelure.png,ok
+Haxorus,Haxorus,haxorus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\haxorus.png,ok
+Beartic,Beartic,beartic,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\beartic.png,ok
+Cryogonal,Cryogonal,cryogonal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cryogonal.png,ok
+Accelgor,Accelgor,accelgor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\accelgor.png,ok
+Stunfisk,Stunfisk,stunfisk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\stunfisk.png,ok
+Stunfisk  Galarian Stunfisk,Stunfisk (Galarian Stunfisk),stunfisk-galarian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\stunfisk-galarian.png,ok
+Mienshao,Mienshao,mienshao,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mienshao.png,ok
+Druddigon,Druddigon,druddigon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\druddigon.png,ok
+Golurk,Golurk,golurk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\golurk.png,ok
+Bouffalant,Bouffalant,bouffalant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bouffalant.png,ok
+Braviary,Braviary,braviary,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\braviary.png,ok
+Braviary  Hisuian Braviary,Braviary (Hisuian Braviary),braviary-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\braviary-hisuian.png,ok
+Mandibuzz,Mandibuzz,mandibuzz,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mandibuzz.png,ok
+Heatmor,Heatmor,heatmor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\heatmor.png,ok
+Durant,Durant,durant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\durant.png,ok
+Hydreigon,Hydreigon,hydreigon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hydreigon.png,ok
+Volcarona,Volcarona,volcarona,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\volcarona.png,ok
+Cobalion,Cobalion,cobalion,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cobalion.png,ok
+Terrakion,Terrakion,terrakion,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\terrakion.png,ok
+Virizion,Virizion,virizion,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\virizion.png,ok
+Tornadus  Incarnate Forme,Tornadus (Incarnate Forme),tornadus-incarnate,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tornadus-incarnate.png,ok
+Tornadus  Therian Forme,Tornadus (Therian Forme),tornadus-therian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tornadus-therian.png,ok
+Thundurus  Incarnate Forme,Thundurus (Incarnate Forme),thundurus-incarnate,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\thundurus-incarnate.png,ok
+Thundurus  Therian Forme,Thundurus (Therian Forme),thundurus-therian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\thundurus-therian.png,ok
+Reshiram,Reshiram,reshiram,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\reshiram.png,ok
+Zekrom,Zekrom,zekrom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zekrom.png,ok
+Landorus  Incarnate Forme,Landorus (Incarnate Forme),landorus-incarnate,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\landorus-incarnate.png,ok
+Landorus  Therian Forme,Landorus (Therian Forme),landorus-therian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\landorus-therian.png,ok
+Kyurem,Kyurem,kyurem,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kyurem.png,ok
+Kyurem  White Kyurem,Kyurem (White Kyurem),kyurem-white,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kyurem-white.png,ok
+Kyurem  Black Kyurem,Kyurem (Black Kyurem),kyurem-black,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kyurem-black.png,ok
+Keldeo  Ordinary Form,Keldeo (Ordinary Form),keldeo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\keldeo.png,ok
+Meloetta  Aria Forme,Meloetta (Aria Forme),meloetta-aria,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\meloetta-aria.png,ok
+Genesect,Genesect,genesect,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\genesect.png,ok
+Chesnaught,Chesnaught,chesnaught,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\chesnaught.png,ok
+Delphox,Delphox,delphox,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\delphox.png,ok
+Greninja,Greninja,greninja,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\greninja.png,ok
+Diggersby,Diggersby,diggersby,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\diggersby.png,ok
+Talonflame,Talonflame,talonflame,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\talonflame.png,ok
+Vivillon,Vivillon,vivillon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\vivillon.png,ok
+Pyroar,Pyroar,pyroar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pyroar.png,ok
+Floette,Floette,floette,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\floette.png,ok
+Florges,Florges,florges,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\florges.png,ok
+Gogoat,Gogoat,gogoat,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gogoat.png,ok
+Pangoro,Pangoro,pangoro,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pangoro.png,ok
+Furfrou,Furfrou,furfrou,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\furfrou.png,ok
+Meowstic  Male,Meowstic (Male),meowstic-male,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\meowstic-male.png,ok
+Meowstic  Female,Meowstic (Female),meowstic-female,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\meowstic-female.png,ok
+Aromatisse,Aromatisse,aromatisse,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\aromatisse.png,ok
+Slurpuff,Slurpuff,slurpuff,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slurpuff.png,ok
+Malamar,Malamar,malamar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\malamar.png,ok
+Barbaracle,Barbaracle,barbaracle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\barbaracle.png,ok
+Dragalge,Dragalge,dragalge,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dragalge.png,ok
+Clawitzer,Clawitzer,clawitzer,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\clawitzer.png,ok
+Heliolisk,Heliolisk,heliolisk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\heliolisk.png,ok
+Tyrantrum,Tyrantrum,tyrantrum,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tyrantrum.png,ok
+Aurorus,Aurorus,aurorus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\aurorus.png,ok
+Sylveon,Sylveon,sylveon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sylveon.png,ok
+Hawlucha,Hawlucha,hawlucha,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hawlucha.png,ok
+Dedenne,Dedenne,dedenne,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dedenne.png,ok
+Carbink,Carbink,carbink,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\carbink.png,ok
+Goodra,Goodra,goodra,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\goodra.png,ok
+Goodra  Hisuian Goodra,Goodra (Hisuian Goodra),goodra-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\goodra-hisuian.png,ok
+Klefki,Klefki,klefki,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\klefki.png,ok
+Trevenant,Trevenant,trevenant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\trevenant.png,ok
+Gourgeist  Average Size,Gourgeist (Average Size),gourgeist-average,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gourgeist-average.png,ok
+Gourgeist  Small Size,Gourgeist (Small Size),gourgeist-small,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gourgeist-small.png,ok
+Gourgeist  Large Size,Gourgeist (Large Size),gourgeist-large,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gourgeist-large.png,ok
+Gourgeist  Super Size,Gourgeist (Super Size),gourgeist-super,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gourgeist-super.png,ok
+Avalugg,Avalugg,avalugg,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\avalugg.png,ok
+Avalugg  Hisuian Avalugg,Avalugg (Hisuian Avalugg),avalugg-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\avalugg-hisuian.png,ok
+Noivern,Noivern,noivern,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\noivern.png,ok
+Xerneas,Xerneas,xerneas,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\xerneas.png,ok
+Yveltal,Yveltal,yveltal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\yveltal.png,ok
+Zygarde  50% Forme,Zygarde (50% Forme),zygarde-50,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zygarde-50.png,ok
+Zygarde  10% Forme,Zygarde (10% Forme),zygarde-10,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zygarde-10.png,ok
+Diancie,Diancie,diancie,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\diancie.png,ok
+Hoopa  Hoopa Confined,Hoopa (Hoopa Confined),hoopa,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hoopa.png,ok
+Hoopa  Hoopa Unbound,Hoopa (Hoopa Unbound),hoopa-unbound,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hoopa-unbound.png,ok
+Volcanion,Volcanion,volcanion,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\volcanion.png,ok
+Decidueye,Decidueye,decidueye,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\decidueye.png,ok
+Decidueye  Hisuian Decidueye,Decidueye (Hisuian Decidueye),decidueye-hisuian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\decidueye-hisuian.png,ok
+Incineroar,Incineroar,incineroar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\incineroar.png,ok
+Primarina,Primarina,primarina,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\primarina.png,ok
+Toucannon,Toucannon,toucannon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\toucannon.png,ok
+Gumshoos,Gumshoos,gumshoos,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gumshoos.png,ok
+Vikavolt,Vikavolt,vikavolt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\vikavolt.png,ok
+Crabominable,Crabominable,crabominable,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\crabominable.png,ok
+Oricorio  Baile Style,Oricorio (Baile Style),oricorio-baile,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oricorio-baile.png,ok
+Oricorio  Pom-Pom Style,Oricorio (Pom-Pom Style),oricorio-pom-pom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oricorio-pom-pom.png,ok
+Oricorio  Pa'u Style,Oricorio (Pa'u Style),oricorio-pau,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oricorio-pau.png,ok
+Oricorio  Sensu Style,Oricorio (Sensu Style),oricorio-sensu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oricorio-sensu.png,ok
+Ribombee,Ribombee,ribombee,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ribombee.png,ok
+Lycanroc  Midday Form,Lycanroc (Midday Form),lycanroc-midday,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lycanroc-midday.png,ok
+Lycanroc  Midnight Form,Lycanroc (Midnight Form),lycanroc-midnight,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lycanroc-midnight.png,ok
+Lycanroc  Dusk Form,Lycanroc (Dusk Form),lycanroc-dusk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lycanroc-dusk.png,ok
+Toxapex,Toxapex,toxapex,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\toxapex.png,ok
+Mudsdale,Mudsdale,mudsdale,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mudsdale.png,ok
+Araquanid,Araquanid,araquanid,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\araquanid.png,ok
+Lurantis,Lurantis,lurantis,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lurantis.png,ok
+Shiinotic,Shiinotic,shiinotic,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\shiinotic.png,ok
+Salazzle,Salazzle,salazzle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\salazzle.png,ok
+Bewear,Bewear,bewear,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bewear.png,ok
+Tsareena,Tsareena,tsareena,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tsareena.png,ok
+Comfey,Comfey,comfey,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\comfey.png,ok
+Oranguru,Oranguru,oranguru,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oranguru.png,ok
+Passimian,Passimian,passimian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\passimian.png,ok
+Golisopod,Golisopod,golisopod,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\golisopod.png,ok
+Palossand,Palossand,palossand,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\palossand.png,ok
+Pyukumuku,Pyukumuku,pyukumuku,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pyukumuku.png,ok
+Silvally,Silvally,silvally,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\silvally.png,ok
+Komala,Komala,komala,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\komala.png,ok
+Turtonator,Turtonator,turtonator,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\turtonator.png,ok
+Togedemaru,Togedemaru,togedemaru,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\togedemaru.png,ok
+Mimikyu,Mimikyu,mimikyu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mimikyu.png,ok
+Bruxish,Bruxish,bruxish,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bruxish.png,ok
+Drampa,Drampa,drampa,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\drampa.png,ok
+Dhelmise,Dhelmise,dhelmise,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dhelmise.png,ok
+Kommo-o,Kommo-o,kommo-o,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kommo-o.png,ok
+Tapu Koko,Tapu Koko,tapu-koko,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tapu-koko.png,ok
+Tapu Lele,Tapu Lele,tapu-lele,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tapu-lele.png,ok
+Tapu Bulu,Tapu Bulu,tapu-bulu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tapu-bulu.png,ok
+Tapu Fini,Tapu Fini,tapu-fini,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tapu-fini.png,ok
+Solgaleo,Solgaleo,solgaleo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\solgaleo.png,ok
+Lunala,Lunala,lunala,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lunala.png,ok
+Nihilego,Nihilego,nihilego,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\nihilego.png,ok
+Buzzwole,Buzzwole,buzzwole,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\buzzwole.png,ok
+Pheromosa,Pheromosa,pheromosa,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pheromosa.png,ok
+Xurkitree,Xurkitree,xurkitree,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\xurkitree.png,ok
+Celesteela,Celesteela,celesteela,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\celesteela.png,ok
+Kartana,Kartana,kartana,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kartana.png,ok
+Guzzlord,Guzzlord,guzzlord,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\guzzlord.png,ok
+Necrozma,Necrozma,necrozma,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\necrozma.png,ok
+Necrozma  Dusk Mane Necrozma,Necrozma (Dusk Mane Necrozma),necrozma-dusk-mane,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\necrozma-dusk-mane.png,ok
+Necrozma  Dawn Wings Necrozma,Necrozma (Dawn Wings Necrozma),necrozma-dawn-wings,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\necrozma-dawn-wings.png,ok
+Magearna,Magearna,magearna,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\magearna.png,ok
+Marshadow,Marshadow,marshadow,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\marshadow.png,ok
+Naganadel,Naganadel,naganadel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\naganadel.png,ok
+Stakataka,Stakataka,stakataka,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\stakataka.png,ok
+Blacephalon,Blacephalon,blacephalon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\blacephalon.png,ok
+Zeraora,Zeraora,zeraora,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zeraora.png,ok
+Melmetal,Melmetal,melmetal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\melmetal.png,ok
+Rillaboom,Rillaboom,rillaboom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rillaboom.png,ok
+Cinderace,Cinderace,cinderace,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cinderace.png,ok
+Inteleon,Inteleon,inteleon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\inteleon.png,ok
+Greedent,Greedent,greedent,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\greedent.png,ok
+Corviknight,Corviknight,corviknight,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\corviknight.png,ok
+Orbeetle,Orbeetle,orbeetle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\orbeetle.png,ok
+Thievul,Thievul,thievul,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\thievul.png,ok
+Eldegoss,Eldegoss,eldegoss,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\eldegoss.png,ok
+Dubwool,Dubwool,dubwool,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dubwool.png,ok
+Drednaw,Drednaw,drednaw,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\drednaw.png,ok
+Boltund,Boltund,boltund,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\boltund.png,ok
+Coalossal,Coalossal,coalossal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\coalossal.png,ok
+Flapple,Flapple,flapple,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\flapple.png,ok
+Appletun,Appletun,appletun,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\appletun.png,ok
+Sandaconda,Sandaconda,sandaconda,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sandaconda.png,ok
+Cramorant,Cramorant,cramorant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cramorant.png,ok
+Barraskewda,Barraskewda,barraskewda,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\barraskewda.png,ok
+Toxtricity  Amped Form,Toxtricity (Amped Form),toxtricity-amped,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\toxtricity-amped.png,ok
+Centiskorch,Centiskorch,centiskorch,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\centiskorch.png,ok
+Grapploct,Grapploct,grapploct,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\grapploct.png,ok
+Polteageist,Polteageist,polteageist,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\polteageist.png,ok
+Hatterene,Hatterene,hatterene,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hatterene.png,ok
+Grimmsnarl,Grimmsnarl,grimmsnarl,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\grimmsnarl.png,ok
+Obstagoon,Obstagoon,obstagoon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\obstagoon.png,ok
+Perrserker,Perrserker,perrserker,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\perrserker.png,ok
+Cursola,Cursola,cursola,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cursola.png,ok
+Sirfetch'd,Sirfetch'd,sirfetchd,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sirfetchd.png,ok
+Mr. Rime,Mr. Rime,mr-rime,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mr-rime.png,ok
+Runerigus,Runerigus,runerigus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\runerigus.png,ok
+Alcremie,Alcremie,alcremie,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\alcremie.png,ok
+Falinks,Falinks,falinks,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\falinks.png,ok
+Pincurchin,Pincurchin,pincurchin,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pincurchin.png,ok
+Frosmoth,Frosmoth,frosmoth,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\frosmoth.png,ok
+Stonjourner,Stonjourner,stonjourner,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\stonjourner.png,ok
+Indeedee  Male,Indeedee (Male),indeedee-male,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\indeedee-male.png,ok
+Indeedee  Female,Indeedee (Female),indeedee-female,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\indeedee-female.png,ok
+Copperajah,Copperajah,copperajah,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\copperajah.png,ok
+Dracozolt,Dracozolt,dracozolt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dracozolt.png,ok
+Arctozolt,Arctozolt,arctozolt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arctozolt.png,ok
+Dracovish,Dracovish,dracovish,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dracovish.png,ok
+Arctovish,Arctovish,arctovish,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arctovish.png,ok
+Dragapult,Dragapult,dragapult,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dragapult.png,ok
+Zacian  Hero of Many Battles,Zacian (Hero of Many Battles),zacian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zacian.png,ok
+Zacian  Crowned Sword,Zacian (Crowned Sword),zacian-crowned,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zacian-crowned.png,ok
+Zamazenta  Hero of Many Battles,Zamazenta (Hero of Many Battles),zamazenta,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zamazenta.png,ok
+Zamazenta  Crowned Shield,Zamazenta (Crowned Shield),zamazenta-crowned,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zamazenta-crowned.png,ok
+Eternatus,Eternatus,eternatus,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\eternatus.png,ok
+Urshifu  Single Strike Style,Urshifu (Single Strike Style),urshifu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\urshifu.png,ok
+Urshifu  Rapid Strike Style,Urshifu (Rapid Strike Style),urshifu-rapid-strike,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\urshifu-rapid-strike.png,ok
+Zarude,Zarude,zarude,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\zarude.png,ok
+Regieleki,Regieleki,regieleki,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\regieleki.png,ok
+Regidrago,Regidrago,regidrago,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\regidrago.png,ok
+Glastrier,Glastrier,glastrier,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\glastrier.png,ok
+Spectrier,Spectrier,spectrier,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\spectrier.png,ok
+Calyrex,Calyrex,calyrex,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\calyrex.png,ok
+Calyrex  Ice Rider,Calyrex (Ice Rider),calyrex-ice-rider,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\calyrex-ice-rider.png,ok
+Calyrex  Shadow Rider,Calyrex (Shadow Rider),calyrex-shadow-rider,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\calyrex-shadow-rider.png,ok
+Wyrdeer,Wyrdeer,wyrdeer,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wyrdeer.png,ok
+Kleavor,Kleavor,kleavor,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kleavor.png,ok
+Ursaluna,Ursaluna,ursaluna,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ursaluna.png,ok
+Ursaluna  Bloodmoon,Ursaluna (Bloodmoon),ursaluna-bloodmoon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ursaluna-bloodmoon.png,ok
+Basculegion  Male,Basculegion (Male),basculegion-male,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\basculegion-male.png,ok
+Basculegion  Female,Basculegion (Female),basculegion-female,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\basculegion-female.png,ok
+Sneasler,Sneasler,sneasler,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sneasler.png,ok
+Overqwil,Overqwil,overqwil,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\overqwil.png,ok
+Enamorus  Incarnate Forme,Enamorus (Incarnate Forme),enamorus-incarnate,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\enamorus-incarnate.png,ok
+Enamorus  Therian Forme,Enamorus (Therian Forme),enamorus-therian,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\enamorus-therian.png,ok
+Meowscarada,Meowscarada,meowscarada,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\meowscarada.png,ok
+Skeledirge,Skeledirge,skeledirge,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\skeledirge.png,ok
+Quaquaval,Quaquaval,quaquaval,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\quaquaval.png,ok
+Oinkologne  Male,Oinkologne (Male),oinkologne-male,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oinkologne-male.png,ok
+Oinkologne  Female,Oinkologne (Female),oinkologne-female,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\oinkologne-female.png,ok
+Spidops,Spidops,spidops,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\spidops.png,ok
+Lokix,Lokix,lokix,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\lokix.png,ok
+Pawmot,Pawmot,pawmot,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pawmot.png,ok
+Maushold  Family of Three,Maushold (Family of Three),maushold,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\maushold.png,ok
+Dachsbun,Dachsbun,dachsbun,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dachsbun.png,ok
+Arboliva,Arboliva,arboliva,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\arboliva.png,ok
+Squawkabilly  Green Plumage,Squawkabilly (Green Plumage),squawkabilly-green,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\squawkabilly-green.png,ok
+Garganacl,Garganacl,garganacl,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\garganacl.png,ok
+Armarouge,Armarouge,armarouge,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\armarouge.png,ok
+Ceruledge,Ceruledge,ceruledge,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ceruledge.png,ok
+Bellibolt,Bellibolt,bellibolt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bellibolt.png,ok
+Kilowattrel,Kilowattrel,kilowattrel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kilowattrel.png,ok
+Mabosstiff,Mabosstiff,mabosstiff,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\mabosstiff.png,ok
+Grafaiai,Grafaiai,grafaiai,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\grafaiai.png,ok
+Brambleghast,Brambleghast,brambleghast,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\brambleghast.png,ok
+Toedscruel,Toedscruel,toedscruel,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\toedscruel.png,ok
+Klawf,Klawf,klawf,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\klawf.png,ok
+Scovillain,Scovillain,scovillain,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\scovillain.png,ok
+Rabsca,Rabsca,rabsca,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\rabsca.png,ok
+Espathra,Espathra,espathra,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\espathra.png,ok
+Tinkaton,Tinkaton,tinkaton,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tinkaton.png,ok
+Wugtrio,Wugtrio,wugtrio,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wugtrio.png,ok
+Bombirdier,Bombirdier,bombirdier,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\bombirdier.png,ok
+Revavroom,Revavroom,revavroom,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\revavroom.png,ok
+Cyclizar,Cyclizar,cyclizar,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cyclizar.png,ok
+Orthworm,Orthworm,orthworm,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\orthworm.png,ok
+Glimmora,Glimmora,glimmora,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\glimmora.png,ok
+Houndstone,Houndstone,houndstone,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\houndstone.png,ok
+Flamigo,Flamigo,flamigo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\flamigo.png,ok
+Cetitan,Cetitan,cetitan,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\cetitan.png,ok
+Veluza,Veluza,veluza,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\veluza.png,ok
+Dondozo,Dondozo,dondozo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dondozo.png,ok
+Tatsugiri  Curly Form,Tatsugiri (Curly Form),tatsugiri-curly,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\tatsugiri-curly.png,ok
+Annihilape,Annihilape,annihilape,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\annihilape.png,ok
+Clodsire,Clodsire,clodsire,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\clodsire.png,ok
+Farigiraf,Farigiraf,farigiraf,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\farigiraf.png,ok
+Dudunsparce  Two-Segment Form,Dudunsparce (Two-Segment Form),dudunsparce-two-segment,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\dudunsparce-two-segment.png,ok
+Kingambit,Kingambit,kingambit,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\kingambit.png,ok
+Great Tusk,Great Tusk,great-tusk,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\great-tusk.png,ok
+Scream Tail,Scream Tail,scream-tail,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\scream-tail.png,ok
+Brute Bonnet,Brute Bonnet,brute-bonnet,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\brute-bonnet.png,ok
+Flutter Mane,Flutter Mane,flutter-mane,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\flutter-mane.png,ok
+Slither Wing,Slither Wing,slither-wing,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\slither-wing.png,ok
+Sandy Shocks,Sandy Shocks,sandy-shocks,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sandy-shocks.png,ok
+Iron Treads,Iron Treads,iron-treads,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-treads.png,ok
+Iron Bundle,Iron Bundle,iron-bundle,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-bundle.png,ok
+Iron Hands,Iron Hands,iron-hands,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-hands.png,ok
+Iron Jugulis,Iron Jugulis,iron-jugulis,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-jugulis.png,ok
+Iron Moth,Iron Moth,iron-moth,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-moth.png,ok
+Iron Thorns,Iron Thorns,iron-thorns,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-thorns.png,ok
+Baxcalibur,Baxcalibur,baxcalibur,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\baxcalibur.png,ok
+Gholdengo,Gholdengo,gholdengo,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gholdengo.png,ok
+Wo-Chien,Wo-Chien,wo-chien,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\wo-chien.png,ok
+Chien-Pao,Chien-Pao,chien-pao,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\chien-pao.png,ok
+Ting-Lu,Ting-Lu,ting-lu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ting-lu.png,ok
+Chi-Yu,Chi-Yu,chi-yu,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\chi-yu.png,ok
+Roaring Moon,Roaring Moon,roaring-moon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\roaring-moon.png,ok
+Iron Valiant,Iron Valiant,iron-valiant,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-valiant.png,ok
+Koraidon,Koraidon,koraidon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\koraidon.png,ok
+Miraidon,Miraidon,miraidon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\miraidon.png,ok
+Walking Wake,Walking Wake,walking-wake,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\walking-wake.png,ok
+Iron Leaves,Iron Leaves,iron-leaves,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-leaves.png,ok
+Sinistcha,Sinistcha,sinistcha,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\sinistcha.png,ok
+Okidogi,Okidogi,okidogi,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\okidogi.png,ok
+Munkidori,Munkidori,munkidori,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\munkidori.png,ok
+Fezandipiti,Fezandipiti,fezandipiti,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\fezandipiti.png,ok
+Ogerpon  Teal Mask,Ogerpon (Teal Mask),ogerpon-teal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ogerpon-teal.png,ok
+Ogerpon  Wellspring Mask,Ogerpon (Wellspring Mask),ogerpon-wellspring,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ogerpon-wellspring.png,ok
+Ogerpon  Hearthflame Mask,Ogerpon (Hearthflame Mask),ogerpon-hearthflame,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ogerpon-hearthflame.png,ok
+Ogerpon  Cornerstone Mask,Ogerpon (Cornerstone Mask),ogerpon-cornerstone,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\ogerpon-cornerstone.png,ok
+Archaludon,Archaludon,archaludon,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\archaludon.png,ok
+Hydrapple,Hydrapple,hydrapple,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\hydrapple.png,ok
+Gouging Fire,Gouging Fire,gouging-fire,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\gouging-fire.png,ok
+Raging Bolt,Raging Bolt,raging-bolt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\raging-bolt.png,ok
+Iron Boulder,Iron Boulder,iron-boulder,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-boulder.png,ok
+Iron Crown,Iron Crown,iron-crown,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\iron-crown.png,ok
+Terapagos  Terastal Form,Terapagos (Terastal Form),terapagos-terastal,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\terapagos-terastal.png,ok
+Pecharunt,Pecharunt,pecharunt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pecharunt.png,ok
+ers\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\terapagos-terastal.png,ok
+Pecharunt,Pecharunt,pecharunt,C:\Users\Richard\Documents\Python Projects\Pokemon Segmentation\5 Cluster\images\pecharunt.png,ok
