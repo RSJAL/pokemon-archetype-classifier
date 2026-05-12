@@ -124,7 +124,7 @@ def img_to_b64(path_str: str):
 
 # ── plotly neighbour web ───────────────────────────────────────────────────────
 def make_neighbour_web_plotly(selected_row, neighbours_df, image_map):
-    n = min(5, len(neighbours_df))
+    n = min(6, len(neighbours_df))
     pokemon_list = [selected_row] + [neighbours_df.iloc[i] for i in range(n)]
 
     BG     = "#0e1117"
@@ -245,17 +245,6 @@ def make_neighbour_web_plotly(selected_row, neighbours_df, image_map):
                 layer="above",
             )
 
-    # ── centre name label ──────────────────────────────────────────────────────
-    centre_name = display_name(selected_row["Name"])
-    centre_label_y = cy - 0.554
-    fig.add_annotation(
-        x=cx, y=centre_label_y,
-        text=f"<b>{centre_name}</b>",
-        showarrow=False,
-        font=dict(color="white", size=14),
-        xref="x", yref="y",
-        xanchor="center", yanchor="top",
-    )
 
 
     # ── invisible click targets for neighbours (indices 1-5) ──────────────────
@@ -289,6 +278,8 @@ def make_neighbour_web_plotly(selected_row, neighbours_df, image_map):
             color="rgba(0,0,0,0)",
             line=dict(color="rgba(0,0,0,0)", width=0),
         ),
+        selected=dict(marker=dict(color="rgba(0,0,0,0)", size=72)),
+        unselected=dict(marker=dict(color="rgba(0,0,0,0)", opacity=1)),
         customdata=hover_custom,
         hovertemplate="%{customdata}<extra></extra>",
         hoverlabel=dict(
@@ -311,7 +302,7 @@ def make_neighbour_web_plotly(selected_row, neighbours_df, image_map):
         showlegend=False,
         hovermode="closest",
         dragmode=False,
-        uirevision="static",
+        uirevision=st.session_state.get("_chart_rev", 0),
     )
 
     return fig
@@ -324,13 +315,14 @@ _POSITIONS = [
     (-1.584, 1.386),  # top-left
     (0.0,    1.98),   # top-centre
     (1.584,  1.386),  # top-right
-    (-1.452, -1.122), # bottom-left
-    (1.452,  -1.122), # bottom-right
+    (-1.584, -1.122), # bottom-left
+    (0.0,   -1.716),  # bottom-centre
+    (1.584,  -1.122), # bottom-right
 ]
 
 
 def make_neighbour_web(selected_row, neighbours_df, image_map):
-    n = min(5, len(neighbours_df))
+    n = min(6, len(neighbours_df))
     pokemon_list = [selected_row] + [neighbours_df.iloc[i] for i in range(n)]
 
     BG = "#0e1117"
@@ -509,8 +501,8 @@ def type_badge(t):
 
 # ── page setup ────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Pokémon Stat Explorer",
-    page_icon="pokeball",
+    page_title="Pokemon Similarity Explorer",
+    page_icon=Image.open(HERE / "pokeball.png"),
     layout="wide",
 )
 
@@ -523,17 +515,37 @@ all_csv_names  = sorted(df["Name"].tolist())
 all_disp_names = [display_name(n) for n in all_csv_names]
 disp_to_csv    = dict(zip(all_disp_names, all_csv_names))
 
-# ── header ────────────────────────────────────────────────────────────────────
-st.title("Pokémon Stat Explorer")
-st.caption("Select any Pokémon to see its 5 nearest neighbours in stat space. Archetypes via K-Means (K=5) · KNN similarity (Euclidean distance) · PCA projection.")
+# ── page title ────────────────────────────────────────────────────────────────
+st.title("Pokemon Similarity Explorer")
+st.caption("Select any Pokémon to see its 6 nearest neighbours in stat space. Archetypes via K-Means (K=5) · KNN similarity (Euclidean distance) · PCA projection.")
 st.divider()
 
-col_select, col_compare_hdr = st.columns([1, 1])
+st.markdown(
+    """
+    <style>
+    /* pointer cursor on the click-target scatter trace (last g in scatterlayer) */
+    .js-plotly-plot .plotly .scatterlayer g:last-child .points path {
+        cursor: pointer !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
+if not image_map:
+    st.warning("No images found. Run `python download_images.py` to download artwork.")
+
+# ── resolve pending click before any widget renders ───────────────────────────
 if "_pending_main" in st.session_state:
     st.session_state["main_select"] = st.session_state.pop("_pending_main")
 
-with col_select:
+# ── two-column layout: left = controls + comparison, right = radar ────────────
+col_left, col_right = st.columns([1, 1])
+
+with col_left:
+    sub_main, sub_compare = st.columns(2)
+
+with sub_main:
     default_disp = display_name("Garchomp")
     selected_disp = st.selectbox(
         "Choose a Pokémon",
@@ -543,14 +555,10 @@ with col_select:
     )
 
 selected_name  = disp_to_csv[selected_disp]
-n_neighbours   = 5
+n_neighbours   = 6
 same_archetype = False
 _sel      = df.loc[df["Name"] == selected_name].iloc[0]
 sel_color = ARCHETYPE_COLORS.get(_sel["Archetype"], "#888")
-
-
-if not image_map:
-    st.warning("No images found. Run `python download_images.py` to download artwork.")
 
 # ── look up selected Pokémon + neighbours ─────────────────────────────────────
 idx      = df[df["Name"] == selected_name].index[0]
@@ -572,8 +580,33 @@ if same_archetype:
         neighbours_df["Archetype"] == selected["Archetype"]
     ]
 
-neighbours_df = neighbours_df.head(n_neighbours).reset_index(drop=True)
-neighbours_5  = neighbours_df.head(5).reset_index(drop=True)
+neighbours_df = neighbours_df.head(n_neighbours)
+_nb_indices   = neighbours_df.index.tolist()
+neighbours_df = neighbours_df.reset_index(drop=True)
+neighbours_6  = neighbours_df.head(6).reset_index(drop=True)
+
+# ── dialog shown when a neighbour is clicked ──────────────────────────────────
+@st.dialog("What would you like to do?")
+def neighbour_action_dialog(name):
+    img_path = image_map.get(disp_to_csv.get(name, name), "")
+    if img_path and Path(img_path).exists():
+        b64 = img_to_b64(img_path)
+        if b64:
+            st.markdown(
+                f'<div style="text-align:center">'
+                f'<img src="{b64}" style="width:120px;height:120px;object-fit:contain"></div>',
+                unsafe_allow_html=True,
+            )
+    st.markdown(f"### {name}")
+    c1, c2 = st.columns(2)
+    with c1:
+        if st.button("Set as main", use_container_width=True):
+            st.session_state["_pending_main"] = name
+            st.rerun()
+    with c2:
+        if st.button("Compare", use_container_width=True):
+            st.session_state["compare_select"] = name
+            st.rerun()
 
 # Handle click from the Plotly web — must run before the compare selectbox renders
 _web_state = st.session_state.get("web_chart", {})
@@ -581,26 +614,20 @@ _pts = (_web_state.get("selection") or {}).get("points", [])
 _last_pts = st.session_state.get("_web_last_pts", [])
 if _pts and _pts != _last_pts:
     st.session_state["_web_last_pts"] = _pts
+    st.session_state["_chart_rev"] = st.session_state.get("_chart_rev", 0) + 1
     _clicked_idx = _pts[0].get("point_index", None)
-    if _clicked_idx is not None and _clicked_idx < len(neighbours_5):
-        st.session_state["_pending_main"] = display_name(
-            neighbours_5.iloc[_clicked_idx]["Name"]
+    if _clicked_idx is not None and _clicked_idx < len(neighbours_6):
+        st.session_state["_dialog_pokemon"] = display_name(
+            neighbours_6.iloc[_clicked_idx]["Name"]
         )
         st.rerun()
 
-with col_compare_hdr:
-    compare_disp = st.selectbox(
-        "Compare with",
-        all_disp_names,
-        index=0,
-        key="compare_select",
-    )
+if "_dialog_pokemon" in st.session_state:
+    neighbour_action_dialog(st.session_state.pop("_dialog_pokemon"))
 
-col_web, col_compare = st.columns([1, 1])
-
-# Left: Plotly neighbour web
-with col_web:
-    fig_web = make_neighbour_web_plotly(selected, neighbours_5, image_map)
+# Right column: radar web
+with col_right:
+    fig_web = make_neighbour_web_plotly(selected, neighbours_6, image_map)
     st.plotly_chart(
         fig_web,
         use_container_width=True,
@@ -609,8 +636,16 @@ with col_web:
         config={"displayModeBar": False, "scrollZoom": False, "doubleClick": "reset"},
     )
 
-# Right: comparison panel
-with col_compare:
+# Left column: compare dropdown + comparison panel
+with sub_compare:
+    compare_disp = st.selectbox(
+        "Compare with",
+        all_disp_names,
+        index=0,
+        key="compare_select",
+    )
+
+with col_left:
     compare_name  = disp_to_csv[compare_disp]
     _cmp          = df.loc[df["Name"] == compare_name].iloc[0]
     cmp_idx       = df[df["Name"] == compare_name].index[0]
@@ -711,7 +746,7 @@ for archetype, color in ARCHETYPE_COLORS.items():
         hovertemplate="%{customdata}<extra></extra>",
         customdata=hover,
     ))
-nb_coords = pca_coords[neighbours_df.index]
+nb_coords = pca_coords[_nb_indices]
 nb_hover  = [
     f"<b>{display_name(row['Name'])}</b><br>"
     f"#{int(row['Dex_Number'])} · Gen {int(row['Generation'])}<br>"
