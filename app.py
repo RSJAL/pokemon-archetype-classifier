@@ -514,17 +514,6 @@ st.set_page_config(
     layout="wide",
 )
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stSidebarContent"] {
-        padding-top: 1rem !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 df, scaler, X = load_data()
 nn_model  = build_nn(X)
 image_map = load_image_map()
@@ -534,55 +523,34 @@ all_csv_names  = sorted(df["Name"].tolist())
 all_disp_names = [display_name(n) for n in all_csv_names]
 disp_to_csv    = dict(zip(all_disp_names, all_csv_names))
 
-# ── sidebar ───────────────────────────────────────────────────────────────────
-with st.sidebar:
-    st.title("Pokémon Stat Explorer")
-    st.caption("Select any Pokémon to see its 5 nearest neighbours in stat space. Archetypes via K-Means (K=5) · KNN similarity (Euclidean distance) · PCA projection.")
-    st.divider()
+# ── header ────────────────────────────────────────────────────────────────────
+st.title("Pokémon Stat Explorer")
+st.caption("Select any Pokémon to see its 5 nearest neighbours in stat space. Archetypes via K-Means (K=5) · KNN similarity (Euclidean distance) · PCA projection.")
+st.divider()
 
+col_select, col_compare_hdr = st.columns([1, 1])
+
+if "_pending_main" in st.session_state:
+    st.session_state["main_select"] = st.session_state.pop("_pending_main")
+
+with col_select:
     default_disp = display_name("Garchomp")
     selected_disp = st.selectbox(
         "Choose a Pokémon",
         all_disp_names,
         index=all_disp_names.index(default_disp),
-    )
-    selected_name = disp_to_csv[selected_disp]
-
-    n_neighbours  = 5
-    same_archetype = False
-
-    _sel = df.loc[df["Name"] == selected_name].iloc[0]
-    sel_color = ARCHETYPE_COLORS.get(_sel["Archetype"], "#888")
-
-    # Dex number + generation
-    st.markdown(
-        f"**#{int(_sel['Dex_Number'])}** &nbsp;·&nbsp; Generation {int(_sel['Generation'])}",
-        unsafe_allow_html=True,
+        key="main_select",
     )
 
-    # Type badges
-    types = str(_sel["Type"]).strip().split()
-    st.markdown("".join(type_badge(t) for t in types) + "<br>", unsafe_allow_html=True)
-
-    # Archetype pill
-    st.markdown(
-        f'<div style="background:{sel_color}28;border-left:4px solid {sel_color};'
-        f'padding:6px 12px;border-radius:6px;font-weight:700;font-size:13px;margin:8px 0 12px">'
-        f'Archetype: {_sel["Archetype"]}</div>',
-        unsafe_allow_html=True,
-    )
-
-    st.markdown("**Base Stats**")
-    for lbl, col_name in zip(STAT_LABELS, STAT_COLS):
-        st.markdown(stat_bar_html(lbl, int(_sel[col_name]), 200, sel_color),
-                    unsafe_allow_html=True)
-    st.markdown(stat_bar_html("Total", int(_sel["Total"]), 700, "#888"),
-                unsafe_allow_html=True)
+selected_name  = disp_to_csv[selected_disp]
+n_neighbours   = 5
+same_archetype = False
+_sel      = df.loc[df["Name"] == selected_name].iloc[0]
+sel_color = ARCHETYPE_COLORS.get(_sel["Archetype"], "#888")
 
 
-    if not image_map:
-        st.divider()
-        st.warning("No images found. Run `python download_images.py` to download artwork.")
+if not image_map:
+    st.warning("No images found. Run `python download_images.py` to download artwork.")
 
 # ── look up selected Pokémon + neighbours ─────────────────────────────────────
 idx      = df[df["Name"] == selected_name].index[0]
@@ -605,11 +573,9 @@ if same_archetype:
     ]
 
 neighbours_df = neighbours_df.head(n_neighbours).reset_index(drop=True)
+neighbours_5  = neighbours_df.head(5).reset_index(drop=True)
 
-# ── main content ──────────────────────────────────────────────────────────────
-neighbours_5 = neighbours_df.head(5).reset_index(drop=True)
-
-# Handle click from the Plotly web — must run before the selectbox renders
+# Handle click from the Plotly web — must run before the compare selectbox renders
 _web_state = st.session_state.get("web_chart", {})
 _pts = (_web_state.get("selection") or {}).get("points", [])
 _last_pts = st.session_state.get("_web_last_pts", [])
@@ -617,9 +583,18 @@ if _pts and _pts != _last_pts:
     st.session_state["_web_last_pts"] = _pts
     _clicked_idx = _pts[0].get("point_index", None)
     if _clicked_idx is not None and _clicked_idx < len(neighbours_5):
-        st.session_state["compare_select"] = display_name(
+        st.session_state["_pending_main"] = display_name(
             neighbours_5.iloc[_clicked_idx]["Name"]
         )
+        st.rerun()
+
+with col_compare_hdr:
+    compare_disp = st.selectbox(
+        "Compare with",
+        all_disp_names,
+        index=0,
+        key="compare_select",
+    )
 
 col_web, col_compare = st.columns([1, 1])
 
@@ -636,66 +611,79 @@ with col_web:
 
 # Right: comparison panel
 with col_compare:
-    compare_disp = st.selectbox(
-        "Compare with",
-        all_disp_names,
-        index=0,
-        key="compare_select",
-    )
-    compare_name = disp_to_csv[compare_disp]
-    _cmp = df.loc[df["Name"] == compare_name].iloc[0]
-    cmp_idx   = df[df["Name"] == compare_name].index[0]
-    cmp_color = ARCHETYPE_COLORS.get(_cmp["Archetype"], "#888")
+    compare_name  = disp_to_csv[compare_disp]
+    _cmp          = df.loc[df["Name"] == compare_name].iloc[0]
+    cmp_idx       = df[df["Name"] == compare_name].index[0]
+    cmp_color     = ARCHETYPE_COLORS.get(_cmp["Archetype"], "#888")
     sel_color_ref = ARCHETYPE_COLORS.get(selected["Archetype"], "#888")
 
-    # Pokémon image
-    cmp_img_path = image_map.get(compare_name, "")
-    if cmp_img_path and Path(cmp_img_path).exists():
-        st.image(cmp_img_path, width=130)
-
-    # Dex # and generation
-    st.markdown(
-        f"**#{int(_cmp['Dex_Number'])}** &nbsp;·&nbsp; Generation {int(_cmp['Generation'])}",
-        unsafe_allow_html=True,
-    )
-
-    # Type badges
-    cmp_types = str(_cmp["Type"]).strip().split()
-    st.markdown("".join(type_badge(t) for t in cmp_types) + "<br>", unsafe_allow_html=True)
-
-    # Archetype pill
-    st.markdown(
-        f'<div style="background:{cmp_color}28;border-left:4px solid {cmp_color};'
-        f'padding:6px 12px;border-radius:6px;font-weight:700;font-size:13px;margin:8px 0 8px">'
-        f'Archetype: {_cmp["Archetype"]}</div>',
-        unsafe_allow_html=True,
-    )
-
-    # Euclidean distance to selected Pokémon
     dist_to_sel = float(np.linalg.norm(X[cmp_idx] - X[idx]))
+
+    def poke_card_html(row, color, img_path):
+        img_tag = ""
+        if img_path and Path(img_path).exists():
+            b64 = img_to_b64(img_path)
+            if b64:
+                img_tag = f'<img src="{b64}" style="width:180px;height:180px;object-fit:contain">'
+        types_html = "".join(
+            f'<span style="background:{TYPE_COLORS.get(t,"#888")};color:white;'
+            f'padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;margin-right:3px">{t}</span>'
+            for t in str(row["Type"]).strip().split()
+        )
+        arch_html = (
+            f'<span style="background:{color}28;border:1px solid {color};'
+            f'padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;color:{color}">'
+            f'{row["Archetype"]}</span>'
+        )
+        return img_tag, display_name(row["Name"]), types_html, arch_html
+
+    sel_img, sel_name_lbl, sel_types, sel_arch = poke_card_html(selected, sel_color_ref, image_map.get(selected_name, ""))
+    cmp_img, cmp_name_lbl, cmp_types, cmp_arch = poke_card_html(_cmp, cmp_color, image_map.get(compare_name, ""))
+
     st.markdown(
-        f'<div style="font-size:13px;color:#aaa;margin-bottom:10px">'
-        f'Distance to <b style="color:white">{selected_disp}</b>: '
-        f'<b style="color:{cmp_color}">{dist_to_sel:.3f}</b></div>',
+        f'<div style="display:flex;align-items:center;gap:0;margin-bottom:12px">'
+        # Left Pokémon
+        f'  <div style="flex:1;text-align:left">'
+        f'    {sel_img}'
+        f'    <div style="font-weight:700;font-size:14px;margin:6px 0 4px">{sel_name_lbl}</div>'
+        f'    <div style="margin-bottom:4px">{sel_types}</div>'
+        f'    <div>{sel_arch}</div>'
+        f'  </div>'
+        # Middle divider + distance
+        f'  <div style="flex:0 0 360px;display:flex;flex-direction:row;align-items:center;gap:6px">'
+        f'    <div style="flex:1;height:1px;background:#444"></div>'
+        f'    <div style="font-size:12px;color:#aaa;white-space:nowrap;text-align:center">'
+        f'      dist<br><b style="color:white;font-size:14px">{dist_to_sel:.3f}</b>'
+        f'    </div>'
+        f'    <div style="flex:1;height:1px;background:#444"></div>'
+        f'  </div>'
+        # Right Pokémon
+        f'  <div style="flex:1;text-align:right">'
+        f'    {cmp_img}'
+        f'    <div style="font-weight:700;font-size:14px;margin:6px 0 4px">{cmp_name_lbl}</div>'
+        f'    <div style="margin-bottom:4px">{cmp_types}</div>'
+        f'    <div>{cmp_arch}</div>'
+        f'  </div>'
+        f'</div>',
         unsafe_allow_html=True,
     )
 
-    # Stat comparison bars (comparison colour vs selected dimmed)
+    # Stat comparison bars
     st.markdown(
         f'<div style="font-size:12px;color:#cccccc;margin-bottom:4px">'
-        f'<span style="color:{cmp_color}">&#9632;</span> {compare_disp} &nbsp;&nbsp;'
-        f'<span style="color:{sel_color_ref};opacity:0.5">&#9632;</span> {selected_disp}</div>',
+        f'<span style="color:{sel_color_ref}">&#9632;</span> {selected_disp} &nbsp;&nbsp;'
+        f'<span style="color:{cmp_color};opacity:0.5">&#9632;</span> {compare_disp}</div>',
         unsafe_allow_html=True,
     )
     for lbl, col_name in zip(STAT_LABELS, STAT_COLS):
         st.markdown(
-            comparison_bar_html(lbl, int(_cmp[col_name]), int(selected[col_name]),
-                                cmp_color, sel_color_ref),
+            comparison_bar_html(lbl, int(selected[col_name]), int(_cmp[col_name]),
+                                sel_color_ref, cmp_color),
             unsafe_allow_html=True,
         )
     st.markdown(
-        comparison_bar_html("Total", int(_cmp["Total"]), int(selected["Total"]),
-                            cmp_color, sel_color_ref, max_val=700),
+        comparison_bar_html("Total", int(selected["Total"]), int(_cmp["Total"]),
+                            sel_color_ref, cmp_color, max_val=700),
         unsafe_allow_html=True,
     )
 
