@@ -89,7 +89,12 @@ def load_image_map():
     if not path.exists():
         return {}
     df_map = pd.read_csv(path)
-    return dict(zip(df_map["csv_name"], df_map["path"].fillna("")))
+    # Rebuild paths relative to HERE/images so they work on any OS
+    def fix_path(p):
+        if not p or pd.isna(p):
+            return ""
+        return str(HERE / "images" / Path(p).name)
+    return dict(zip(df_map["csv_name"], df_map["path"].fillna("").apply(fix_path)))
 
 
 def get_image(csv_name: str, image_map: dict):
