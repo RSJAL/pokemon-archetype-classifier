@@ -93,7 +93,8 @@ def load_image_map():
     def fix_path(p):
         if not p or pd.isna(p):
             return ""
-        return str(HERE / "images" / Path(p).name)
+        filename = p.replace("\\", "/").split("/")[-1]
+        return str(HERE / "images" / filename)
     return dict(zip(df_map["csv_name"], df_map["path"].fillna("").apply(fix_path)))
 
 
