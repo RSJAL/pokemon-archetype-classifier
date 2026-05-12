@@ -203,7 +203,7 @@ def make_neighbour_web_plotly(selected_row, neighbours_df, image_map):
             type="line",
             x0=cx, y0=cy, x1=nx, y1=ny,
             line=dict(color="#3a3a4a", width=1.2, dash="dash"),
-            xref="x", yref="y",
+            xref="x", yref="y", layer="below",
         )
         dist = neighbours_df.iloc[i - 1].get("Distance", None)
         if dist is not None:
